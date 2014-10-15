@@ -17,8 +17,10 @@ class CreateAttendeesTable extends Migration {
 			$table->increments('id');
 			$table->string('name');
 			$table->string('surname');
+			$table->string('nickname');
 			$table->string('email')->nullable();
 			$table->string('tel')->nullable();
+			$table->string('parent_tel');
 			$table->smallInteger('class')->nullable()->unsigned();
 			$table->string('school')->nullable();
 			$table->string('facebook_url')->nullable();

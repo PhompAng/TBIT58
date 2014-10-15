@@ -15,6 +15,6 @@ return array(
 
 	'previous' => '&laquo; หน้าก่อนหน้า',
 
-	'next'     => 'หน้าต่อไป &raquo;',
+	'next'     => 'หน้าถัดไป &raquo;',
 
 );

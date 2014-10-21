@@ -24,7 +24,8 @@ class CreateAttendeesTable extends Migration {
 			$table->smallInteger('class')->nullable()->unsigned();
 			$table->string('school')->nullable();
 			$table->string('facebook_url')->nullable();
-			$table->string('transport')->nullable();
+			$table->string('trip')->nullable();
+			$table->string('return_trip')->nullable();
 			$table->string('food_allergy')->nullable();
 			$table->string('med_allergy')->nullable();
 			$table->string('health_condition')->nullable();

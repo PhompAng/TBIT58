@@ -7,7 +7,8 @@
     <title>{{{ $title or 'ToBeIT@KMITL \'58' }}}</title>
 
     <!-- Bootstrap -->
-    {{ HTML::style('assets/css/bootstrap.min.css') }}
+    {{ HTML::style('assets/css/vendor/bootstrap.min.css') }}
+    {{ HTML::style('assets/css/flat-ui.css') }}
     {{ HTML::style('assets/css/style.css') }}
     @yield('css')
 

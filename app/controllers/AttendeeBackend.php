@@ -9,7 +9,10 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('backend.attendee.list');
+		$data = array('attendees' 		=> Attendee::paginate(20),
+					  'attendees_count' => Attendee::all()->count()
+					  );
+		return View::make('backend.attendee.list', $data);
 	}
 
 
@@ -43,7 +46,8 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$data = array('attendee' => Attendee::find($id), );
+		return View::make('backend.attendee.view', $data);
 	}
 
 

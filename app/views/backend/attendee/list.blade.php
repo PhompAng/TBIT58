@@ -6,7 +6,7 @@
 	<div class="col-xs-12">
 		<div class="box">
 			<div class="page-header">
-				<h1>Attendees List <small>(35 persons)</small></h1>
+				<h1>Attendees List <small>({{$attendees_count}} persons)</small></h1>
 			</div>
 			<div class="actions-btn">
 				<a href="#" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-plus"></i> Add new attendee</a>
@@ -24,148 +24,25 @@
 						<th>Actions</th>
 					</thead>
 					<tbody>
+						@foreach ($attendees as $attendee)
 						<tr>
-							<td>570001</td>
-							<td><strong>นายต้นสาย สิงห์กังวาน</strong></td>
-							<td>ต้น</td>
+							<td>{{$attendee->id}}</td>
+							<td><strong>{{$attendee->name}} {{$attendee->surname}}</strong></td>
+							<td>{{$attendee->nickname}}</td>
 							<td>2 Days</td>
-							<td><a href="#" class="btn btn-xs btn-default">Profile Page</a></td>
-							<td>4 November 2014, 23:13</td>
+							<td><a href="{{$attendee->facebook_url}}" class="btn btn-xs btn-default">Profile Page</a></td>
+							<td>{{$attendee->created_at}}</td>
 							<td>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
+								<a href="{{URL::to('/backend/attendee/'.$attendee->id)}}" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
 								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i></a>
 								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
 								<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
 							</td>
 						</tr>
-						<tr>
-							<td>570001</td>
-							<td><strong>นายต้นสาย สิงห์กังวาน</strong></td>
-							<td>ต้น</td>
-							<td>2 Days</td>
-							<td><a href="#" class="btn btn-xs btn-default">Profile Page</a></td>
-							<td>4 November 2014, 23:13</td>
-							<td>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
-								<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td>570001</td>
-							<td><strong>นายต้นสาย สิงห์กังวาน</strong></td>
-							<td>ต้น</td>
-							<td>2 Days</td>
-							<td><a href="#" class="btn btn-xs btn-default">Profile Page</a></td>
-							<td>4 November 2014, 23:13</td>
-							<td>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
-								<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td>570001</td>
-							<td><strong>นายต้นสาย สิงห์กังวาน</strong></td>
-							<td>ต้น</td>
-							<td>2 Days</td>
-							<td><a href="#" class="btn btn-xs btn-default">Profile Page</a></td>
-							<td>4 November 2014, 23:13</td>
-							<td>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
-								<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td>570001</td>
-							<td><strong>นายต้นสาย สิงห์กังวาน</strong></td>
-							<td>ต้น</td>
-							<td>2 Days</td>
-							<td><a href="#" class="btn btn-xs btn-default">Profile Page</a></td>
-							<td>4 November 2014, 23:13</td>
-							<td>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
-								<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td>570001</td>
-							<td><strong>นายต้นสาย สิงห์กังวาน</strong></td>
-							<td>ต้น</td>
-							<td>2 Days</td>
-							<td><a href="#" class="btn btn-xs btn-default">Profile Page</a></td>
-							<td>4 November 2014, 23:13</td>
-							<td>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
-								<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td>570001</td>
-							<td><strong>นายต้นสาย สิงห์กังวาน</strong></td>
-							<td>ต้น</td>
-							<td>2 Days</td>
-							<td><a href="#" class="btn btn-xs btn-default">Profile Page</a></td>
-							<td>4 November 2014, 23:13</td>
-							<td>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
-								<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td>570001</td>
-							<td><strong>นายต้นสาย สิงห์กังวาน</strong></td>
-							<td>ต้น</td>
-							<td>2 Days</td>
-							<td><a href="#" class="btn btn-xs btn-default">Profile Page</a></td>
-							<td>4 November 2014, 23:13</td>
-							<td>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
-								<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td>570001</td>
-							<td><strong>นายต้นสาย สิงห์กังวาน</strong></td>
-							<td>ต้น</td>
-							<td>2 Days</td>
-							<td><a href="#" class="btn btn-xs btn-default">Profile Page</a></td>
-							<td>4 November 2014, 23:13</td>
-							<td>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
-								<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td>570001</td>
-							<td><strong>นายต้นสาย สิงห์กังวาน</strong></td>
-							<td>ต้น</td>
-							<td>2 Days</td>
-							<td><a href="#" class="btn btn-xs btn-default">Profile Page</a></td>
-							<td>4 November 2014, 23:13</td>
-							<td>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
-								<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
-							</td>
-						</tr>
+						@endforeach
 					</tbody>
 				</table>
+				<div class="text-center">{{$attendees->links()}}</div>	
 			</div>
 			<div class="actions-btn">
 				<a href="#" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-plus"></i> Add new attendee</a>

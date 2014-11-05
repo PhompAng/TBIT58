@@ -17,3 +17,15 @@ Route::get('/', function()
 });
 
 Route::resource('register', 'Register');
+
+//Route::resource('/backend/attendee', 'BackendController');
+
+Route::get('/backend', 'BackendController@showDashboard');
+Route::get('/backend/login', 'BackendController@showLogin');
+Route::post('/backend/login', 'BackendController@doLogin');
+Route::get('/backend/logout', 'BackendController@doLogout');
+
+Route::resource('/backend/attendee', 'AttendeeBackend');
+Route::resource('/backend/checkin', 'CheckInBackend');
+Route::resource('/backend/medical', 'MedicalBackend');
+Route::resource('/backend/user', 'UserBackend');

@@ -23,6 +23,12 @@ class CreateAttendingTable extends Migration {
 			$table->boolean('day_4')->default(False);
 			$table->boolean('day_5')->default(False);
 			$table->boolean('day_6')->default(False);
+			$table->boolean('day_1_check')->default(False);
+			$table->boolean('day_2_check')->default(False);
+			$table->boolean('day_3_check')->default(False);
+			$table->boolean('day_4_check')->default(False);
+			$table->boolean('day_5_check')->default(False);
+			$table->boolean('day_6_check')->default(False);
 		});
 	}
 

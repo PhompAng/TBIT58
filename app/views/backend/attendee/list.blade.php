@@ -9,7 +9,7 @@
 				<h1>Attendees List <small>({{$attendees_count}} persons)</small></h1>
 			</div>
 			<div class="actions-btn">
-				<a href="#" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-plus"></i> Add new attendee</a>
+				<a href="{{URL::to('/backend/attendee/create')}}" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-plus"></i> Add new attendee</a>
 				<a href="#" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete selected</a>
 			</div>
 			<div class="table-responsive">
@@ -35,7 +35,7 @@
 							<td>
 								<a href="{{URL::to('/backend/attendee/'.$attendee->id)}}" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
 								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i></a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
+								<a href="{{URL::to('/backend/attendee/'.$attendee->id.'/edit')}}" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
 								<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
 							</td>
 						</tr>
@@ -45,7 +45,7 @@
 				<div class="text-center">{{$attendees->links()}}</div>	
 			</div>
 			<div class="actions-btn">
-				<a href="#" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-plus"></i> Add new attendee</a>
+				<a href="{{URL::to('/backend/attendee/create')}}" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-plus"></i> Add new attendee</a>
 				<a href="#" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete selected</a>
 			</div>
 		</div>

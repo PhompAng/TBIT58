@@ -23,7 +23,7 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('backend.attendee.add');
 	}
 
 
@@ -59,7 +59,8 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$data = array('attendee' => Attendee::find($id), );
+		return View::make('backend.attendee.edit', $data);
 	}
 
 

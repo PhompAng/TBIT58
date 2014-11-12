@@ -85,7 +85,7 @@
 	<div class="col-md-5">
 		<div class="box">
 			<div class="page-header">
-				<h4>Contact Info <small>(#{{$attendee->id}})</small></h4>
+				<h4>Contact Info</h4>
 			</div>
 			<div class="row">
 				<div class="col-xs-12">

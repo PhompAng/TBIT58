@@ -15,17 +15,20 @@
 	<div class="collapse navbar-collapse" id="main-nav">
 	  <ul class="nav navbar-nav">
 		<li><a class="page-scroll" href="#agenda">กำหนดการ</a></li>
-		<li><a class="page-scroll" href="#course">วิชาที่เปิดติว (ดาวน์โหลดเอกสาร)</a></li>
+		<li><a class="page-scroll" href="#course">เนื้อหาและเอกสาร</a></li>
 		<li><a class="page-scroll" href="#faq">ถาม - ตอบ</a></li>
-		<li><a class="page-scroll" href="#contact">สถานที่</a></li>
+		<li><a class="page-scroll" href="#contact">การเดินทาง</a></li>
 	  </ul>
 	</div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
 <section id="intro" class="bg-black">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 logo">Logo</div>
+			<div class="col-md-6 logo">
+				<img id="logo" src="{{URL::to('/assets/img/logo.png')}}" alt="ToBeIT@KMITL '58">
+			</div>
 			<div class="col-md-6">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime recusandae nihil repellendus magnam possimus qui laboriosam inventore fuga itaque tenetur, labore dolore, nisi sint consectetur explicabo voluptatibus perspiciatis adipisci impedit iusto in. Iste doloremque eaque numquam maiores praesentium, mollitia, sequi, harum debitis aperiam dignissimos nulla. At aut repellat in odio, ratione sint dicta fugiat sapiente. Obcaecati odio quasi dolorum tempora numquam reprehenderit laudantium et reiciendis quod nostrum debitis, nulla iste nemo, mollitia dolorem praesentium aut architecto odit. Fuga eaque in, maxime impedit, eligendi aperiam minus sunt autem a consequatur porro omnis accusamus pariatur explicabo velit ea, illo iure similique rerum!</p>
 				<a href="#" class="btn btn-primary">Register</a>
@@ -35,27 +38,61 @@
 	</div>
 </section>
 
-<section id="agenda" class="bg-amber">
+<section id="agenda" class="bg-teal">
 	<div class="container">
-		Vertical Timeline
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<img class="section-heading" src="{{URL::to('/assets/text/heading_schedule.svg')}}">
+			</div>
+		</div>
 	</div>
 </section>
 
 <section id="course" class="bg-cyan">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">Subject1</div>
-			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">Subject2</div>
-			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">Subject3</div>
-			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">Subject4</div>
-			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">Subject5</div>
-			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">Subject6</div>
+			<div class="col-xs-12 text-center">
+				<img class="section-heading" src="{{URL::to('/assets/text/heading_download.svg')}}">
+			</div>
+			<div class="col-xs-12 col-sm-2 col-md-3">
+				<div class="subject-item">
+					<img src="http://placehold.it/150x150">
+					<h4 class="subject-title">Computer Hardware</h4>
+					<a href="#" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-2 col-md-3">
+				<div class="subject-item">
+					<img src="http://placehold.it/150x150">
+					<h4 class="subject-title">Computer Hardware</h4>
+					<a href="#" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-2 col-md-3">
+				<div class="subject-item">
+					<img src="http://placehold.it/150x150">
+					<h4 class="subject-title">Computer Hardware</h4>
+					<a href="#" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-2 col-md-3">
+				<div class="subject-item">
+					<img src="http://placehold.it/150x150">
+					<h4 class="subject-title">Computer Hardware</h4>
+					<a href="#" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
 
 <section id="faq" class="bg-orange">
 	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<img class="section-heading" src="{{URL::to('/assets/text/heading_faq.svg')}}">
+			</div>
+		</div>
 		<div class="row faq-item">
 			<div class="col-md-6">
 				<dt>Question 1</dt>
@@ -89,13 +126,13 @@
 	</div>
 </section>
 
-<section id="contact" class="bg-black">
+<section id="contact" class="bg-gray">
 	<div class="container">
-		<div class="col-md-6">
-			Contact Info
+		<div class="col-md-6 text-center">
+			<img class="section-heading" src="{{URL::to('/assets/text/heading_contact.svg')}}">
 		</div>
-		<div class="col-md-6">
-			Map
+		<div class="col-md-6 text-center">
+			<img class="section-heading" src="{{URL::to('/assets/text/heading_transportation.svg')}}">
 		</div>
 	</div>
 </section>

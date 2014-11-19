@@ -5,29 +5,5 @@
     {{ HTML::script('assets/js/jquery.easing.min.js') }}
     {{ HTML::script('assets/js/scrolling-nav.js') }}
     @yield('js')
-
-    <script type="text/javascript">
-    var animatedScroll = false;
-    $('.navbar').animate({
-        "top": "-50px"
-    });
-    $(window).scroll(function () {
-        if(!animatedScroll){
-            animatedScroll = true;
-            if ($(window).scrollTop() > $('#test').position().top)
-             {
-                $('.navbar').animate({
-                    "top": "0px"
-                }, function(){ animatedScroll = false;});
-             }
-            else
-             {
-              $('.navbar').animate({
-                    "top": "-50px"
-                },function(){ animatedScroll = false;});
-             }
-        }
-    });
-    </script>
   </body>
 </html>

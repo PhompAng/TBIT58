@@ -96,6 +96,7 @@ img#logo {
     text-align: center;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
     padding-top: 15px;
+    margin-bottom: 15px;
 }
 
 .subject-item > h4 {

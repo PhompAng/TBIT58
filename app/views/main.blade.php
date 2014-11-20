@@ -23,7 +23,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<section id="intro" class="bg-black">
+<section id="intro" class="bg-tran">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 logo">

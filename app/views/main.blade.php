@@ -38,7 +38,7 @@
 	</div>
 </section>
 
-<section id="agenda" class="bg-teal">
+<section id="agenda" class="bg-nephritis">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 text-center">
@@ -158,7 +158,7 @@
 	</div>
 </section>
 
-<section id="contact" class="bg-cyan">
+<section id="contact" class="bg-river">
 	<div class="container">
 		<div class="col-md-6 text-center">
 			<img class="section-heading" src="{{URL::to('/assets/text/heading_contact.svg')}}">

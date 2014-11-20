@@ -44,6 +44,38 @@
 			<div class="col-xs-12 text-center">
 				<img class="section-heading" src="{{URL::to('/assets/text/heading_schedule.svg')}}">
 			</div>
+			<div class="col-md-6 text-right timeline-line">
+				<div class="timeline-item-l">
+					<h4>1 ธันวาคม 2557</h4>
+					<span>เปิดรับลงทะเบียนออนไลน์</span>
+				</div>
+				<div class="clearfix"></div>
+				<div class="timeline-item-l">
+					<h4>10 มกราคม 2558</h4>
+					<span>เริ่มติววันแรก</span>
+				</div>
+				<div class="clearfix"></div>
+				<div class="timeline-item-l">
+					<h4>7 กุมภาพันธ์ 2558</h4>
+					<span>Quiz</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="timeline-item-r">
+					<h4>30 ธันวาคม 2557</h4>
+					<span>ปิดรับลงทะเบียน</span>
+				</div>
+				<div class="clearfix"></div>
+				<div class="timeline-item-r">
+					<h4>1 กุมภาพันธ์ 2558</h4>
+					<span>ติววันสุดท้าย</span>
+				</div>
+				<div class="clearfix"></div>
+				<div class="timeline-item-r">
+					<h4>14 กุมภาพันธ์ 2558</h4>
+					<span>วันสอบตรงไอทีลาดกระบัง</span>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -58,28 +90,28 @@
 				<div class="subject-item">
 					<img src="http://placehold.it/150x150">
 					<h4 class="subject-title">Computer Hardware</h4>
-					<a href="#" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+					<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-3">
 				<div class="subject-item">
 					<img src="http://placehold.it/150x150">
 					<h4 class="subject-title">Computer Hardware</h4>
-					<a href="#" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+					<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-3">
 				<div class="subject-item">
 					<img src="http://placehold.it/150x150">
 					<h4 class="subject-title">Computer Hardware</h4>
-					<a href="#" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+					<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-3">
 				<div class="subject-item">
 					<img src="http://placehold.it/150x150">
 					<h4 class="subject-title">Computer Hardware</h4>
-					<a href="#" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+					<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 				</div>
 			</div>
 		</div>

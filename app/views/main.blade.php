@@ -24,7 +24,7 @@
 </nav>
 
 <section id="intro" class="bg-tran">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-6 logo">
 				<img id="logo" src="{{URL::to('/assets/img/logo.png')}}" alt="ToBeIT@KMITL '58">

@@ -60,6 +60,7 @@ section#intro {
 .section-heading {
 	height: 48px;
 	margin-bottom: 30px;
+	max-width: 100%;
 }
 
 .logo {
@@ -68,6 +69,7 @@ section#intro {
 
 img#logo {
 	width: 400px;
+	max-width: 100%;
 }
 
 .navbar .navbar-nav {

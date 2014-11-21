@@ -16,7 +16,7 @@
 	  <ul class="nav navbar-nav">
 		<li><a class="page-scroll" href="#agenda">กำหนดการ</a></li>
 		<li><a class="page-scroll" href="#course">เนื้อหาและเอกสาร</a></li>
-		<li><a class="page-scroll" href="#faq">ถาม - ตอบ</a></li>
+		<li><a class="page-scroll" href="#faq">ถามตอบ</a></li>
 		<li><a class="page-scroll" href="#contact">การเดินทาง</a></li>
 	  </ul>
 	</div><!-- /.navbar-collapse -->

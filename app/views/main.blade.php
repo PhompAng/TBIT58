@@ -203,14 +203,39 @@
 	</div>
 </section>
 
-<section id="contact" class="bg-river">
+<section id="transportation" class="bg-asphalt">
 	<div class="container">
-		<div class="col-md-6 text-center">
-			<img class="section-heading" src="{{URL::to('/assets/text/heading_contact.svg')}}">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<img class="section-heading" src="{{URL::to('/assets/text/heading_transportation.svg')}}">
+			</div>
+			<div class="col-md-6">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.792152490152!2d100.78122500000003!3d13.73103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6636ecec9c2b%3A0xd2850fd9ee87f249!2sFaculty+of+Information+Technology!5e0!3m2!1sen!2sth!4v1416420297310" width="100%" height="380" frameborder="0" style="border:0"></iframe>
+			</div>
+			<div class="col-md-6">
+				<div class="well">
+					สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ตั้งอยู่บริเวณฝั่งตะวันออกของกรุงเทพมหานคร อยู่ในพื้นที่เขตลาดกระบัง ทางทิศเหนือของท่าอากาศยานสุวรรณภูมิ ทิศเหนือติดกับถนนมอเตอร์เวย์ กรุงเทพ-ชลบุรี (สายใหม่) ทิศใต้ติดกับคลองประเวศบุรีรมย์ มีถนนฉลองกรุงตัดผ่านกลางสถาบันในทิศตะวันออกเฉียงเหนือ-ใต้ และทางรถไฟสายตะวันออกตัดผ่านกลางสถาบันในทิศตะวันออก-ตะวันตก
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-md-3"><a href="#" class="btn btn-block btn-sm btn-primary">รถไฟ</a></div>
+					<div class="col-sm-6 col-md-3"><a href="#" class="btn btn-block btn-sm btn-primary">รถไฟฟ้า</a></div>
+					<div class="col-sm-6 col-md-3"><a href="#" class="btn btn-block btn-sm btn-primary">รถประจำทาง</a></div>
+					<div class="col-sm-6 col-md-3"><a href="#" class="btn btn-block btn-sm btn-primary">รถยนต์ส่วนตัว</a></div>
+				</div>
+			</div>
 		</div>
-		<div class="col-md-6 text-center">
-			<img class="section-heading" src="{{URL::to('/assets/text/heading_transportation.svg')}}">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.792152490152!2d100.78122500000003!3d13.73103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6636ecec9c2b%3A0xd2850fd9ee87f249!2sFaculty+of+Information+Technology!5e0!3m2!1sen!2sth!4v1416420297310" width="100%" height="380" frameborder="0" style="border:0"></iframe>
+	</div>
+</section>
+
+<section id="contact" class="bg-black">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<img class="section-heading" src="{{URL::to('/assets/text/heading_contact.svg')}}">
+			</div>
+			<div class="col-md-6">
+
+			</div>
 		</div>
 	</div>
 </section>

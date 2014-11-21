@@ -1,3 +1,11 @@
+*,
+*:before,
+*:after {
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
 body {
 	font-size: 13px;
 	/*font-family: 'ThaiSansNeue';
@@ -51,7 +59,8 @@ section {
 }
 
 section#intro {
-	padding-top: 100px;
+	padding-top: 80px;
+	padding-bottom: 70px;
 	/*color: #d7d7d7;*/
 	/*background-image: url('../img/bg.png'); */
 }
@@ -158,10 +167,11 @@ section#agenda {
 	background: rgba(255, 255, 255, 0.9);
 	padding: 20px;
 	padding-bottom: 15px;
-	border-radius: 3px;
+	border-radius: 4px;
 	display: inline-block;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
 	margin-bottom: 15px;
+	border-bottom: 2px solid #b4b4b4;
 }
 
 .timeline-item-r {
@@ -177,6 +187,10 @@ section#agenda {
 	margin-top: 50px;
 }
 
+.timeline-item-l:last-child {
+	margin-bottom: 70px;
+}
+
 div[class^=timeline-item-]:before {
 	content: "";
 	width: 20px;
@@ -186,6 +200,7 @@ div[class^=timeline-item-]:before {
 	position: absolute;
 	border: 3px solid #fff;
 	margin-top: 13px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .timeline-item-l:before { right: -13px; }
@@ -222,6 +237,12 @@ div[class^=timeline-item-]:before {
 	font-size: 26px;
 	line-height: 23px;
 	margin: 0;
+}
+
+.well {
+	font-family: "ThaiSansNeue";
+	font-size: 20px;
+	line-height: 27px;
 }
 
 .bg-tran {}

@@ -24,15 +24,19 @@
 </nav>
 
 <section id="intro" class="bg-tran">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
-			<div class="col-md-6 logo">
+			<div class="col-xs-12 logo">
 				<img id="logo" src="{{URL::to('/assets/img/logo.png')}}" alt="ToBeIT@KMITL '58">
 			</div>
-			<div class="col-md-6">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime recusandae nihil repellendus magnam possimus qui laboriosam inventore fuga itaque tenetur, labore dolore, nisi sint consectetur explicabo voluptatibus perspiciatis adipisci impedit iusto in. Iste doloremque eaque numquam maiores praesentium, mollitia, sequi, harum debitis aperiam dignissimos nulla. At aut repellat in odio, ratione sint dicta fugiat sapiente. Obcaecati odio quasi dolorum tempora numquam reprehenderit laudantium et reiciendis quod nostrum debitis, nulla iste nemo, mollitia dolorem praesentium aut architecto odit. Fuga eaque in, maxime impedit, eligendi aperiam minus sunt autem a consequatur porro omnis accusamus pariatur explicabo velit ea, illo iure similique rerum!</p>
-				<a href="#" class="btn btn-primary">Register</a>
-				<a href="#" class="btn btn-default">Agenda</a>
+			<div class="col-xs-12 col-md-8 col-md-offset-2">
+				<div class="well well-sm triangle text-center">
+					สมัครโว้ยยยยยยยยยย
+				</div>
+				<div class="main_buttons text-center">
+					<a href="#" class="btn btn-lg btn-primary">Register</a>
+					<a href="#" class="btn btn-lg btn-default">Agenda</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -44,43 +48,73 @@
 			<div class="col-xs-12 text-center">
 				<img class="section-heading" src="{{URL::to('/assets/text/heading_schedule.svg')}}">
 			</div>
-			<div class="col-md-6 text-right timeline-line">
+			<div class="col-xs-6 text-right timeline">
 				<div class="timeline-item-l">
-					<h4>1 ธันวาคม 2557</h4>
-					<span>เปิดรับลงทะเบียนออนไลน์</span>
+					<div class="timeline-icon pull-left hidden-xs hidden-sm">
+						<i class="glyphicon glyphicon-pencil"></i>
+					</div>
+					<div class="timeline-content">
+						<h4>1 ธันวาคม 2557</h4>
+						<span>เปิดรับลงทะเบียนออนไลน์</span>
+					</div>
 				</div>
 				<div class="clearfix"></div>
 				<div class="timeline-item-l">
-					<h4>10 มกราคม 2558</h4>
-					<span>เริ่มติววันแรก</span>
+					<div class="timeline-icon pull-left hidden-xs hidden-sm">
+						<i class="glyphicon glyphicon-book"></i>
+					</div>
+					<div class="timeline-content">
+						<h4>10 มกราคม 2558</h4>
+						<span>เริ่มติววันแรก</span>
+					</div>
 				</div>
 				<div class="clearfix"></div>
 				<div class="timeline-item-l">
-					<h4>7 กุมภาพันธ์ 2558</h4>
-					<span>Quiz</span>
+					<div class="timeline-icon pull-left hidden-xs hidden-sm">
+						<i class="glyphicon glyphicon-list-alt"></i>
+					</div>
+					<div class="timeline-content">
+						<h4>7 กุมภาพันธ์ 2558</h4>
+						<span>Quiz</span>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-xs-6">
 				<div class="timeline-item-r">
-					<h4>30 ธันวาคม 2557</h4>
-					<span>ปิดรับลงทะเบียน</span>
+					<div class="timeline-icon pull-right hidden-xs hidden-sm">
+						<i class="glyphicon glyphicon-off"></i>
+					</div>
+					<div class="timeline-content">
+						<h4>7 มกราคม 2557</h4>
+						<span>ปิดรับลงทะเบียน</span>
+					</div>
 				</div>
 				<div class="clearfix"></div>
 				<div class="timeline-item-r">
-					<h4>1 กุมภาพันธ์ 2558</h4>
-					<span>ติววันสุดท้าย</span>
+					<div class="timeline-icon pull-right hidden-xs hidden-sm">
+						<i class="glyphicon glyphicon-book"></i>
+					</div>
+					<div class="timeline-content">
+						<h4>1 กุมภาพันธ์ 2558</h4>
+						<span>ติววันสุดท้าย</span>
+					</div>
 				</div>
 				<div class="clearfix"></div>
 				<div class="timeline-item-r">
-					<h4>14 กุมภาพันธ์ 2558</h4>
-					<span>วันสอบตรงไอทีลาดกระบัง</span>
+					<div class="timeline-icon pull-right hidden-xs hidden-sm">
+						<i class="glyphicon glyphicon-calendar"></i>
+					</div>
+					<div class="timeline-content">
+						<h4>14 กุมภาพันธ์ 2558</h4>
+						<span>วันสอบตรงไอทีลาดกระบัง</span>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section id="course" class="bg-black">
+<section id="course" class="bg-tran">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 text-center">

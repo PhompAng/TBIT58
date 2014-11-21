@@ -190,7 +190,7 @@
 	$(window).scroll(function () {
 		if(!animatedScroll){
 			animatedScroll = true;
-			if ($(window).scrollTop() > $('#agenda').position().top)
+			if ($(window).scrollTop() > $('#agenda').position().top-49)
 			 {
 				$('.navbar').animate({
 					"top": "0px"

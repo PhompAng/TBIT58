@@ -4,6 +4,7 @@
     {{ HTML::script('assets/js/bootstrap.min.js') }}
     {{ HTML::script('assets/js/jquery.easing.min.js') }}
     {{ HTML::script('assets/js/scrolling-nav.js') }}
+    {{ HTML::script('assets/js/owl.carousel.min.js') }}
     @yield('js')
   </body>
 </html>

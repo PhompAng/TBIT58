@@ -104,6 +104,8 @@ img#logo {
   padding-top: 15px;
   margin-bottom: 15px;
   border-bottom: 3px solid #b4b4b4;
+  width: 100%;
+  float: left;
 }
 
 .subject-item > h4 {
@@ -116,6 +118,12 @@ img#logo {
 
 .subject-item > a {
 	margin-bottom: 15px;
+}
+
+.subject-item > img {
+	width: 150px !important;
+	height: 150px;
+	display: inline !important;
 }
 
 .timeline-line {

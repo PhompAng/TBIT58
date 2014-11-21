@@ -8,8 +8,10 @@
 
     <!-- Bootstrap -->
     {{ HTML::style('assets/css/bootstrap.min.css') }}
-    {{ HTML::style('assets/css/style.css') }}
     {{ HTML::style('assets/css/scrolling-nav.css') }}
+    {{ HTML::style('assets/css/owl.carousel.css') }}
+    {{ HTML::style('assets/css/owl.theme.default.min.css') }}
+    {{ HTML::style('assets/css/style.css') }}
     @yield('css')
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

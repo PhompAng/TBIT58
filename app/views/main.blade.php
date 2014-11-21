@@ -86,32 +86,43 @@
 			<div class="col-xs-12 text-center">
 				<img class="section-heading" src="{{URL::to('/assets/text/heading_download.svg')}}">
 			</div>
-			<div class="col-xs-12 col-sm-6 col-md-3">
-				<div class="subject-item">
-					<img src="http://placehold.it/150x150">
-					<h4 class="subject-title">Computer Hardware</h4>
-					<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-3">
-				<div class="subject-item">
-					<img src="http://placehold.it/150x150">
-					<h4 class="subject-title">Computer Hardware</h4>
-					<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-3">
-				<div class="subject-item">
-					<img src="http://placehold.it/150x150">
-					<h4 class="subject-title">Computer Hardware</h4>
-					<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-3">
-				<div class="subject-item">
-					<img src="http://placehold.it/150x150">
-					<h4 class="subject-title">Computer Hardware</h4>
-					<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+			<div class="col-xs-12">
+				<div class="owl-carousel">
+						<div class="subject-item">
+							<img src="http://placehold.it/150x150">
+							<h4 class="subject-title">Hardware</h4>
+							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+						</div>
+						<div class="subject-item">
+							<img src="http://placehold.it/150x150">
+							<h4 class="subject-title">Software</h4>
+							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+						</div>
+						<div class="subject-item">
+							<img src="http://placehold.it/150x150">
+							<h4 class="subject-title">Logic & Ethics</h4>
+							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+						</div>
+						<div class="subject-item">
+							<img src="http://placehold.it/150x150">
+							<h4 class="subject-title">Database</h4>
+							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+						</div>
+						<div class="subject-item">
+							<img src="http://placehold.it/150x150">
+							<h4 class="subject-title">Website & Multimedia</h4>
+							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+						</div>
+						<div class="subject-item">
+							<img src="http://placehold.it/150x150">
+							<h4 class="subject-title">Network</h4>
+							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+						</div>
+						<div class="subject-item">
+							<img src="http://placehold.it/150x150">
+							<h4 class="subject-title">Programming & Math</h4>
+							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -193,5 +204,21 @@
 			 }
 		}
 	});
+
+	$('.owl-carousel').owlCarousel({
+    margin:20,
+    responsive : {
+	    0 : {
+	      items: 1
+	    },
+	    768 : {
+	      items: 2
+	    },
+	    970 : {
+	    	items: 5
+	    }
+		}
+	})
+
 	</script>
 @stop

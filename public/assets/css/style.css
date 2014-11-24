@@ -167,15 +167,23 @@ section#agenda {
   margin-bottom: 20px;
 }
 
+.card {
+	border-bottom: 3px solid #b4b4b4;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+	background: #fff;
+	border-radius: 5px;
+	padding: 15px;
+}
+
 .subject-item {
   /*height: 300px;*/
   background: #fff;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   padding-top: 15px;
   margin-bottom: 15px;
-  border-bottom: 3px solid #b4b4b4;
+  padding-right: 0;
+  padding-left: 0;
   width: 100%;
   float: left;
 }
@@ -209,9 +217,7 @@ section#agenda {
 	padding-bottom: 15px;
 	border-radius: 4px;
 	display: inline-block;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
 	margin-bottom: 15px;
-	border-bottom: 2px solid #b4b4b4;
 }
 
 .timeline-item-r {
@@ -277,6 +283,15 @@ div[class^=timeline-item-]:before {
 	font-size: 26px;
 	line-height: 23px;
 	margin: 0;
+}
+
+.timeline-remark {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.timeline-remark > p {
+	font-size: 20px;
+	margin-bottom: 0;
 }
 
 .well {

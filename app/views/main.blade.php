@@ -50,7 +50,7 @@
 				<img class="section-heading" src="{{URL::to('/assets/text/heading_schedule.svg')}}">
 			</div>
 			<div class="col-xs-6 text-right timeline">
-				<div class="timeline-item-l">
+				<div class="timeline-item-l card">
 					<div class="timeline-icon pull-left hidden-xs hidden-sm">
 						<i class="glyphicon glyphicon-pencil"></i>
 					</div>
@@ -60,7 +60,7 @@
 					</div>
 				</div>
 				<div class="clearfix"></div>
-				<div class="timeline-item-l">
+				<div class="timeline-item-l card">
 					<div class="timeline-icon pull-left hidden-xs hidden-sm">
 						<i class="glyphicon glyphicon-book"></i>
 					</div>
@@ -70,7 +70,7 @@
 					</div>
 				</div>
 				<div class="clearfix"></div>
-				<div class="timeline-item-l">
+				<div class="timeline-item-l card">
 					<div class="timeline-icon pull-left hidden-xs hidden-sm">
 						<i class="glyphicon glyphicon-list-alt"></i>
 					</div>
@@ -81,7 +81,7 @@
 				</div>
 			</div>
 			<div class="col-xs-6">
-				<div class="timeline-item-r">
+				<div class="timeline-item-r card">
 					<div class="timeline-icon pull-right hidden-xs hidden-sm">
 						<i class="glyphicon glyphicon-off"></i>
 					</div>
@@ -91,7 +91,7 @@
 					</div>
 				</div>
 				<div class="clearfix"></div>
-				<div class="timeline-item-r">
+				<div class="timeline-item-r card">
 					<div class="timeline-icon pull-right hidden-xs hidden-sm">
 						<i class="glyphicon glyphicon-book"></i>
 					</div>
@@ -101,7 +101,7 @@
 					</div>
 				</div>
 				<div class="clearfix"></div>
-				<div class="timeline-item-r">
+				<div class="timeline-item-r card">
 					<div class="timeline-icon pull-right hidden-xs hidden-sm">
 						<i class="glyphicon glyphicon-calendar"></i>
 					</div>
@@ -109,6 +109,14 @@
 						<h4>14 กุมภาพันธ์ 2558</h4>
 						<span>วันสอบตรงไอทีลาดกระบัง</span>
 					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+				<div class="timeline-remark card">
+					<p><strong>ติวทุกวันเสาร์-อาทิตย์ เว้นวันที่ 17, 18 มกราคม 2558</strong></p>
+					<p>เวลา 9.00 น. ถึง 16.00 น. (พักเที่ยง 12.00 ถึง 12.30 น.)</p>
+					<p>แต่งกายด้วยชุดไปรเวทสุภาพ กางเกงขายาว รองเท้าหุ้มส้น ห้ามรองเท้าแตะ!</p>
+					<p>อย่าลืมนำเอกสารประกอบการเรียนมาด้วยนะ :D</p>
 				</div>
 			</div>
 		</div>
@@ -123,37 +131,37 @@
 			</div>
 			<div class="col-xs-12">
 				<div class="owl-carousel">
-						<div class="subject-item">
+						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/hw.gif')}}">
 							<h4 class="subject-title">Hardware</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>
-						<div class="subject-item">
+						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/sw.gif')}}">
 							<h4 class="subject-title">Software</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>
-						<div class="subject-item">
+						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/logic.gif')}}">
 							<h4 class="subject-title">Logic & Ethics</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>
-						<div class="subject-item">
+						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/db.gif')}}">
 							<h4 class="subject-title">Database</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>
-						<div class="subject-item">
+						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/media.gif')}}">
 							<h4 class="subject-title">Website & Multimedia</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>
-						<div class="subject-item">
+						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/network.gif')}}">
 							<h4 class="subject-title">Network</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>
-						<div class="subject-item">
+						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/programming.gif')}}">
 							<h4 class="subject-title">Programming & Math</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
@@ -268,15 +276,10 @@
 	$('.owl-carousel').owlCarousel({
     margin:20,
     responsive : {
-	    0 : {
-	      items: 1
-	    },
-	    768 : {
-	      items: 2
-	    },
-	    970 : {
-	    	items: 5
-	    }
+	    0 : { items: 1 },
+	    768 : { items: 2 },
+	    970 : { items: 4},
+	    1170 : { items: 5 }
 		}
 	})
 

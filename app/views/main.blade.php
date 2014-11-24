@@ -35,8 +35,8 @@
 โอกาสดีๆ มาถึงแล้ว เพียงน้องมาติวกับพี่ๆ คณะไอทีลาดกระบังในโครงการ "ติวน้องสอบตรงไอทีลาดกระบัง ToBeIT@KMITL ‘58" งานนี้ฟรีตลอดงาน!
 				</div>
 				<div class="main_buttons text-center">
-					<a href="#" class="btn btn-lg btn-primary">Register</a>
-					<a href="#" class="btn btn-lg btn-default">Agenda</a>
+					<a href="{{URL::to('/register/create')}}" id="register_button" class="page-scroll btn btn-lg btn-primary">ลงทะเบียนเข้าร่วมโครงการ</a>
+					<a href="#agenda" id="agenda_button" class="page-scroll btn btn-lg btn-default">กำหนดการ</a>
 				</div>
 			</div>
 		</div>

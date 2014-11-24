@@ -74,7 +74,7 @@
 						<i class="glyphicon glyphicon-list-alt"></i>
 					</div>
 					<div class="timeline-content">
-						<h4>7 กุมภาพันธ์ 2558</h4>
+						<h4>1 กุมภาพันธ์ 2558</h4>
 						<span>Quiz</span>
 					</div>
 				</div>
@@ -95,7 +95,7 @@
 						<i class="glyphicon glyphicon-book"></i>
 					</div>
 					<div class="timeline-content">
-						<h4>1 กุมภาพันธ์ 2558</h4>
+						<h4>31 มกราคม 2558</h4>
 						<span>ติววันสุดท้าย</span>
 					</div>
 				</div>

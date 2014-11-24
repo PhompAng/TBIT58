@@ -78,7 +78,7 @@ img#logo {
 .well.triangle {
 	font-family: "ThaiSansNeue";
 	font-size: 25px;
-	font-weight: bold;
+	line-height: 1.2em;
 }
 
 .well.triangle:before {

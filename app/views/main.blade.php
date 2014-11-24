@@ -4,22 +4,22 @@
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
-	<div class="navbar-header">
-	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
-		<span class="sr-only">Toggle navigation</span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	  </button>
-	</div>
-	<div class="collapse navbar-collapse" id="main-nav">
-	  <ul class="nav navbar-nav">
-		<li><a class="page-scroll" href="#agenda">กำหนดการ</a></li>
-		<li><a class="page-scroll" href="#course">เนื้อหาและเอกสาร</a></li>
-		<li><a class="page-scroll" href="#faq">ถามตอบ</a></li>
-		<li><a class="page-scroll" href="#contact">การเดินทาง</a></li>
-	  </ul>
-	</div><!-- /.navbar-collapse -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		</div>
+		<div class="collapse navbar-collapse" id="main-nav">
+		  <ul class="nav navbar-nav">
+			<li><a class="page-scroll" href="#agenda">กำหนดการ</a></li>
+			<li><a class="page-scroll" href="#course">เนื้อหาและเอกสาร</a></li>
+			<li><a class="page-scroll" href="#faq">ถามตอบ</a></li>
+			<li><a class="page-scroll" href="#contact">การเดินทาง</a></li>
+		  </ul>
+		</div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
@@ -30,8 +30,9 @@
 				<img id="logo" src="{{URL::to('/assets/img/logo.png')}}" alt="ToBeIT@KMITL '58">
 			</div>
 			<div class="col-xs-12 col-md-8 col-md-offset-2">
-				<div class="well well-sm triangle text-center">
-					สมัครโว้ยยยยยยยยยย
+				<div class="well triangle text-center">
+					ไม่ว่าน้องจะจบ ม.ปลายสายไหน หรือจบ ปวช. จากที่ใด หากน้องเป็นผู้ที่สนใจในศาสตร์แห่ง IT แต่ไม่รู้ว่าจะหาความรู้ด้านนี้ที่ไหนดี!?!
+โอกาสดีๆ มาถึงแล้ว เพียงน้องมาติวกับพี่ๆ คณะไอทีลาดกระบังในโครงการ "ติวน้องสอบตรงไอทีลาดกระบัง ToBeIT@KMITL ‘58" งานนี้ฟรีตลอดงาน!
 				</div>
 				<div class="main_buttons text-center">
 					<a href="#" class="btn btn-lg btn-primary">Register</a>
@@ -123,37 +124,37 @@
 			<div class="col-xs-12">
 				<div class="owl-carousel">
 						<div class="subject-item">
-							<img src="http://placehold.it/150x150">
+							<img src="{{URL::to('/assets/img/courses/hw.gif')}}">
 							<h4 class="subject-title">Hardware</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item">
-							<img src="http://placehold.it/150x150">
+							<img src="{{URL::to('/assets/img/courses/sw.gif')}}">
 							<h4 class="subject-title">Software</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item">
-							<img src="http://placehold.it/150x150">
+							<img src="{{URL::to('/assets/img/courses/logic.gif')}}">
 							<h4 class="subject-title">Logic & Ethics</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item">
-							<img src="http://placehold.it/150x150">
+							<img src="{{URL::to('/assets/img/courses/db.gif')}}">
 							<h4 class="subject-title">Database</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item">
-							<img src="http://placehold.it/150x150">
+							<img src="{{URL::to('/assets/img/courses/media.gif')}}">
 							<h4 class="subject-title">Website & Multimedia</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item">
-							<img src="http://placehold.it/150x150">
+							<img src="{{URL::to('/assets/img/courses/network.gif')}}">
 							<h4 class="subject-title">Network</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item">
-							<img src="http://placehold.it/150x150">
+							<img src="{{URL::to('/assets/img/courses/programming.gif')}}">
 							<h4 class="subject-title">Programming & Math</h4>
 							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
 						</div>

@@ -85,7 +85,7 @@
 						<i class="glyphicon glyphicon-off"></i>
 					</div>
 					<div class="timeline-content">
-						<h4>7 มกราคม 2557</h4>
+						<h4>7 มกราคม 2558</h4>
 						<span>ปิดรับลงทะเบียน</span>
 					</div>
 				</div>

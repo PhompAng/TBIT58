@@ -103,6 +103,7 @@ img#logo {
 	-o-transition: background 0.5s;
 	transition: background 0.5s;
 	margin-right: 10px;
+	margin-bottom: 15px;
 }
 
 #register_button:hover {

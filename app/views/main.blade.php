@@ -34,9 +34,8 @@
 					ไม่ว่าน้องจะจบ ม.ปลายสายไหน หรือจบ ปวช. จากที่ใด หากน้องเป็นผู้ที่สนใจในศาสตร์แห่ง IT แต่ไม่รู้ว่าจะหาความรู้ด้านนี้ที่ไหนดี!?!
 โอกาสดีๆ มาถึงแล้ว เพียงน้องมาติวกับพี่ๆ คณะไอทีลาดกระบังในโครงการ "ติวน้องสอบตรงไอทีลาดกระบัง ToBeIT@KMITL ‘58" งานนี้ฟรีตลอดงาน!
 				</div>
-				<div class="main_buttons text-center">
+				<div class="main_button text-center">
 					<a href="{{URL::to('/register/create')}}" id="register_button" class="page-scroll btn btn-lg btn-primary">ลงทะเบียนเข้าร่วมโครงการ</a>
-					<a href="#agenda" id="agenda_button" class="page-scroll btn btn-lg btn-default">กำหนดการ</a>
 				</div>
 			</div>
 		</div>

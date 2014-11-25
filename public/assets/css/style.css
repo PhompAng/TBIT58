@@ -92,6 +92,10 @@ img#logo {
 	border-color: transparent transparent #f5f5f5 transparent;
 }
 
+.main_button {
+	height: 49px;
+}
+
 #register_button {
 	font-family: "ThaiSansNeue";
 	font-size: 20px;
@@ -103,7 +107,6 @@ img#logo {
 	-o-transition: background 0.5s;
 	transition: background 0.5s;
 	margin-right: 10px;
-	margin-bottom: 15px;
 }
 
 #register_button:hover {
@@ -111,27 +114,8 @@ img#logo {
 }
 
 #register_button:active {
-	border-bottom: 2px solid #d35400;
-}
-
-#agenda_button {
-	font-family: "ThaiSansNeue";
-	font-size: 20px;
-	font-weight: bold;
-	border: none;
-	border-bottom: 3px solid #b4b4b4;
-	-webkit-transition: background 0.5s;
-	-o-transition: background 0.5s;
-	transition: background 0.5s;
-	margin-bottom: 15px;
-}
-
-#agenda_button:hover {
-	background: #e0e0e0;
-}
-
-#agenda_button:active {
-	border-bottom: 2px solid #b4b4b4;
+	border-bottom-width: 2px;
+	margin-top: 1px;
 }
 
 .section-heading {

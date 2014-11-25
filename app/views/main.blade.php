@@ -129,7 +129,7 @@
 				<img class="section-heading" src="{{URL::to('/assets/text/heading_download.svg')}}">
 			</div>
 			<div class="col-xs-12">
-				<div class="owl-carousel">
+				<div class="courses-slider">
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/hw.gif')}}">
 							<h4 class="subject-title">Hardware</h4>
@@ -285,7 +285,7 @@
 		}
 	});
 
-	$('.owl-carousel').owlCarousel({
+	$('.courses-slider').owlCarousel({
 	margin:20,
 	responsive : {
 		0 : { items: 1 },
@@ -295,5 +295,5 @@
 		}
 	});
 
-	</script>
+</script>
 @stop

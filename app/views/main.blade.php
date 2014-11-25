@@ -51,7 +51,7 @@
 			<div class="col-xs-6 text-right timeline">
 				<div class="timeline-item-l card">
 					<div class="timeline-icon pull-left hidden-xs hidden-sm">
-						<i class="glyphicon glyphicon-pencil"></i>
+						<span class="glyphicon glyphicon-pencil"></span>
 					</div>
 					<div class="timeline-content">
 						<h4>1 ธันวาคม 2557</h4>
@@ -61,7 +61,7 @@
 				<div class="clearfix"></div>
 				<div class="timeline-item-l card">
 					<div class="timeline-icon pull-left hidden-xs hidden-sm">
-						<i class="glyphicon glyphicon-book"></i>
+						<span class="glyphicon glyphicon-book"></span>
 					</div>
 					<div class="timeline-content">
 						<h4>10 มกราคม 2558</h4>
@@ -71,7 +71,7 @@
 				<div class="clearfix"></div>
 				<div class="timeline-item-l card">
 					<div class="timeline-icon pull-left hidden-xs hidden-sm">
-						<i class="glyphicon glyphicon-list-alt"></i>
+						<span class="glyphicon glyphicon-list-alt"></span>
 					</div>
 					<div class="timeline-content">
 						<h4>1 กุมภาพันธ์ 2558</h4>
@@ -82,7 +82,7 @@
 			<div class="col-xs-6">
 				<div class="timeline-item-r card">
 					<div class="timeline-icon pull-right hidden-xs hidden-sm">
-						<i class="glyphicon glyphicon-off"></i>
+						<span class="glyphicon glyphicon-off"></span>
 					</div>
 					<div class="timeline-content">
 						<h4>7 มกราคม 2558</h4>
@@ -92,7 +92,7 @@
 				<div class="clearfix"></div>
 				<div class="timeline-item-r card">
 					<div class="timeline-icon pull-right hidden-xs hidden-sm">
-						<i class="glyphicon glyphicon-book"></i>
+						<span class="glyphicon glyphicon-book"></span>
 					</div>
 					<div class="timeline-content">
 						<h4>31 มกราคม 2558</h4>
@@ -102,7 +102,7 @@
 				<div class="clearfix"></div>
 				<div class="timeline-item-r card">
 					<div class="timeline-icon pull-right hidden-xs hidden-sm">
-						<i class="glyphicon glyphicon-calendar"></i>
+						<span class="glyphicon glyphicon-calendar"></span>
 					</div>
 					<div class="timeline-content">
 						<h4>14 กุมภาพันธ์ 2558</h4>
@@ -133,37 +133,37 @@
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/hw.gif')}}">
 							<h4 class="subject-title">Hardware</h4>
-							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+							<a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/sw.gif')}}">
 							<h4 class="subject-title">Software</h4>
-							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+							<a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/logic.gif')}}">
 							<h4 class="subject-title">Logic & Ethics</h4>
-							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+							<a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/db.gif')}}">
 							<h4 class="subject-title">Database</h4>
-							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+							<a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/media.gif')}}">
 							<h4 class="subject-title">Website & Multimedia</h4>
-							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+							<a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/network.gif')}}">
 							<h4 class="subject-title">Network</h4>
-							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+							<a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/programming.gif')}}">
 							<h4 class="subject-title">Programming & Math</h4>
-							<a href="#" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-download-alt"></i> ดาวน์โหลดเอกสาร</a>
+							<a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 				</div>
 			</div>
@@ -248,11 +248,11 @@
 				<div class="well">
 					<div class="row">
 						<div class="col-sm-6">
-							<i class="glyphicon glyphicon-earphone glyphicon-sm"></i> พี่โอ๊ต : 08X-XXX-XXXX<br>
-							<i class="glyphicon glyphicon-earphone glyphicon-sm"></i> พี่บลาๆ : 08X-XXX-XXXX
+							<span class="glyphicon glyphicon-earphone glyphicon-sm"></span> พี่โอ๊ต : 08X-XXX-XXXX<br>
+							<span class="glyphicon glyphicon-earphone glyphicon-sm"></span> พี่บลาๆ : 08X-XXX-XXXX
 						</div>
 						<div class="col-sm-6">
-							<i class="glyphicon glyphicon-envelope glyphicon-sm"></i>  <a href="https://www.facebook.com/messages/289696517715853">ส่งข้อความผ่าน Facebook</a>
+							<span class="glyphicon glyphicon-envelope glyphicon-sm"></span>  <a href="https://www.facebook.com/messages/289696517715853">ส่งข้อความผ่าน Facebook</a>
 						</div>
 					</div>
 				</div>

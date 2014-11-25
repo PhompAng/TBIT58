@@ -3,24 +3,24 @@
 @section('content')
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
+	<div class="container">
 		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
 			<span class="sr-only">Toggle navigation</span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
-		  </button>
+			</button>
 		</div>
 		<div class="collapse navbar-collapse" id="main-nav">
-		  <ul class="nav navbar-nav">
+			<ul class="nav navbar-nav">
 			<li><a class="page-scroll" href="#agenda">กำหนดการ</a></li>
 			<li><a class="page-scroll" href="#course">เนื้อหาและเอกสาร</a></li>
 			<li><a class="page-scroll" href="#faq">ถามตอบ</a></li>
 			<li><a class="page-scroll" href="#contact">การเดินทาง</a></li>
-		  </ul>
+			</ul>
 		</div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+	</div><!-- /.container-fluid -->
 </nav>
 
 <section id="intro" class="bg-tran">
@@ -266,7 +266,7 @@
 			 }
 			else
 			 {
-			  $('.navbar').animate({
+				$('.navbar').animate({
 					"top": "-50px"
 				},function(){ animatedScroll = false;});
 			 }

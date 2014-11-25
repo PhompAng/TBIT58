@@ -242,7 +242,20 @@
 				<img class="section-heading" src="{{URL::to('/assets/text/heading_contact.svg')}}">
 			</div>
 			<div class="col-md-6">
-
+				<p class="contact-instruction">หากน้องๆ มีข้อสงสัยในโครงการ ไม่ว่าจะเป็น... ต้องมาลงทะเบียนที่คณะไหม? เลิกกี่โมง? ต้องมาทุกวันไหม? ฯลฯ ลองอ่านส่วน <a href="#faq" class="page-scroll">ถามตอบ</a> ดูก่อนนะครับ หากยังไม่พบสิ่งที่ต้องการ ส่งข้อความมาทางแฟนเพจ หรือจะโทรหาพี่ๆ ผู้ดูแลโครงการก็ได้ครับ :D</p>
+			</div>
+			<div class="col-md-6">
+				<div class="well">
+					<div class="row">
+						<div class="col-sm-6">
+							<i class="glyphicon glyphicon-earphone glyphicon-sm"></i> พี่โอ๊ต : 08X-XXX-XXXX<br>
+							<i class="glyphicon glyphicon-earphone glyphicon-sm"></i> พี่บลาๆ : 08X-XXX-XXXX
+						</div>
+						<div class="col-sm-6">
+							<i class="glyphicon glyphicon-envelope glyphicon-sm"></i>  <a href="https://www.facebook.com/messages/289696517715853">ส่งข้อความผ่าน Facebook</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

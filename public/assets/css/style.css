@@ -284,12 +284,27 @@ div[class^=timeline-item-]:before {
 	font-family: "ThaiSansNeue";
 	font-size: 20px;
 	line-height: 27px;
+	color: #333;
 }
 
-.bg-tran {}
+section#contact {
+	color: #efefef;
+	font-family: "ThaiSansNeue";
+	font-size: 23px;
+}
+
+.glyphicon-sm {
+	font-size: 15px;
+}
+
+p.contact-instruction {
+	text-indent: 40px;
+}
+
+.bg-tran { background: transparent; }
 .bg-cyan { background: #00bcd4; }
 .bg-amber { background: #ffc107; }
-/*.bg-orange { background: #ff9800; }*/
+.bg-orange { background: #ff9800; }
 .bg-brown { background: #795548; }
 .bg-teal { background: #009688; }
 .bg-turquoise { background: #52ad81; }

@@ -17,7 +17,7 @@
 			<li><a class="page-scroll" href="#agenda">กำหนดการ</a></li>
 			<li><a class="page-scroll" href="#course">เนื้อหาและเอกสาร</a></li>
 			<li><a class="page-scroll" href="#transportation">การเดินทาง</a></li>
-			<li><a class="page-scroll" href="#faq">ถามตอบ</a></li>
+			<!--<li><a class="page-scroll" href="#faq">ถามตอบ</a></li>-->
 			<li><a class="page-scroll" href="#contact">ติดต่อสอบถาม</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
@@ -195,7 +195,7 @@
 	</div>
 </section>
 
-<section id="faq" class="bg-pomegranate">
+<!--<section id="faq" class="bg-pomegranate">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 text-center">
@@ -225,7 +225,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
 
 <section id="contact" class="bg-black">
 	<div class="container">
@@ -234,7 +234,7 @@
 				<img class="section-heading" src="{{URL::to('/assets/text/heading_contact.svg')}}">
 			</div>
 			<div class="col-md-6">
-				<p class="contact-instruction">หากน้องๆ มีข้อสงสัยในโครงการ ไม่ว่าจะเป็น... ต้องมาลงทะเบียนที่คณะไหม? เลิกกี่โมง? ต้องมาทุกวันไหม? ฯลฯ ลองอ่านส่วน <a href="#faq" class="page-scroll">ถามตอบ</a> ดูก่อนนะครับ หากยังไม่พบสิ่งที่ต้องการ ส่งข้อความมาทางแฟนเพจ หรือจะโทรหาพี่ๆ ผู้ดูแลโครงการก็ได้ครับ :D</p>
+				<p class="contact-instruction">หากน้องๆ มีข้อสงสัยในโครงการ ไม่ว่าจะเป็น... ต้องมาลงทะเบียนที่คณะไหม? เลิกกี่โมง? ต้องมาทุกวันไหม? ฯลฯ ลองอ่านส่วน <!--<a href="#faq" class="page-scroll">-->ถามตอบ<!--</a>--> ดูก่อนนะครับ หากยังไม่พบสิ่งที่ต้องการ ส่งข้อความมาทางแฟนเพจ หรือจะโทรหาพี่ๆ ผู้ดูแลโครงการก็ได้ครับ :D</p>
 			</div>
 			<div class="col-md-6">
 				<div class="well">

@@ -240,8 +240,8 @@
 				<div class="well">
 					<div class="row">
 						<div class="col-sm-6">
-							<span class="glyphicon glyphicon-earphone glyphicon-sm"></span> พี่โอ๊ต : 08X-XXX-XXXX<br>
-							<span class="glyphicon glyphicon-earphone glyphicon-sm"></span> พี่บลาๆ : 08X-XXX-XXXX
+							<span class="glyphicon glyphicon-earphone glyphicon-sm"></span> พี่โอ๊ต : 098-251-8700<br>
+							<span class="glyphicon glyphicon-earphone glyphicon-sm"></span> พี่ต้น : 081-804-8870
 						</div>
 						<div class="col-sm-6">
 							<span class="glyphicon glyphicon-envelope glyphicon-sm"></span>  <a href="https://www.facebook.com/messages/289696517715853">ส่งข้อความผ่าน Facebook</a>

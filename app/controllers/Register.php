@@ -37,10 +37,13 @@ class Register extends \BaseController {
 	public function store()
 	{
 		$validate_rules = array(
+			'prefix' 	 => 'required',	
 			'name'       => 'required',
 			'surname'    => 'required',
+			'gender'	 =>	'required',
 			'email'      => 'required|email',
 			'parent_tel' => 'required|numeric',
+			'tel' 		 => 'numeric',
 		);
 		$validator = Validator::make(Input::all(), $validate_rules);
 		if (!$validator->fails()) {

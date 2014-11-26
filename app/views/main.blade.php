@@ -16,8 +16,8 @@
 			<ul class="nav navbar-nav">
 			<li><a class="page-scroll" href="#agenda">กำหนดการ</a></li>
 			<li><a class="page-scroll" href="#course">เนื้อหาและเอกสาร</a></li>
-			<li><a class="page-scroll" href="#faq">ถามตอบ</a></li>
 			<li><a class="page-scroll" href="#transportation">การเดินทาง</a></li>
+			<li><a class="page-scroll" href="#faq">ถามตอบ</a></li>
 			<li><a class="page-scroll" href="#contact">ติดต่อสอบถาม</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
@@ -171,46 +171,6 @@
 	</div>
 </section>
 
-<section id="faq" class="bg-orange">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 text-center">
-				<img class="section-heading" src="{{URL::to('/assets/text/heading_faq.svg')}}">
-			</div>
-		</div>
-		<div class="row faq-item">
-			<div class="col-md-6">
-				<dt>Question 1</dt>
-				<dd>lorem100</dd>
-			</div>
-			<div class="col-md-6">
-				<dt>Question 2</dt>
-				<dd>Answer 2</dd>
-			</div>
-		</div>
-		<div class="row faq-item">
-			<div class="col-md-6">
-				<dt>Question 3</dt>
-				<dd>Answer 3</dd>
-			</div>
-			<div class="col-md-6">
-				<dt>Question 4</dt>
-				<dd>Answer 4</dd>
-			</div>
-		</div>
-		<div class="row faq-item">
-			<div class="col-md-6">
-				<dt>Question 5</dt>
-				<dd>Answer 5</dd>
-			</div>
-			<div class="col-md-6">
-				<dt>Question 6</dt>
-				<dd>Answer 6</dd>
-			</div>
-		</div>
-	</div>
-</section>
-
 <section id="transportation" class="bg-asphalt">
 	<div class="container">
 		<div class="row">
@@ -225,11 +185,43 @@
 					สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ตั้งอยู่บริเวณฝั่งตะวันออกของกรุงเทพมหานคร อยู่ในพื้นที่เขตลาดกระบัง ทางทิศเหนือของท่าอากาศยานสุวรรณภูมิ ทิศเหนือติดกับถนนมอเตอร์เวย์ กรุงเทพ-ชลบุรี (สายใหม่) ทิศใต้ติดกับคลองประเวศบุรีรมย์ มีถนนฉลองกรุงตัดผ่านกลางสถาบันในทิศตะวันออกเฉียงเหนือ-ใต้ และทางรถไฟสายตะวันออกตัดผ่านกลางสถาบันในทิศตะวันออก-ตะวันตก
 				</div>
 				<div class="row">
-					<div class="col-sm-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-4" target="_blank" class="btn btn-block btn-sm btn-primary">รถไฟ</a></div>
+					<div class="col-sm-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-4" target="_blank" class="btn btn-block btn-sm btn-primary"><img src="http://placehold.it/100x100" width="100%" alt=""></a></div>
 					<div class="col-sm-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-5" target="_blank" class="btn btn-block btn-sm btn-primary">รถไฟฟ้า</a></div>
 					<div class="col-sm-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-6" target="_blank" class="btn btn-block btn-sm btn-primary">รถประจำทาง</a></div>
 					<div class="col-sm-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-7" target="_blank" class="btn btn-block btn-sm btn-primary">รถยนต์ส่วนตัว</a></div>
 				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="faq" class="bg-pomegranate">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<img class="section-heading" src="{{URL::to('/assets/text/heading_faq.svg')}}">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<dl>
+					<dt>Question 1</dt>
+					<dd>เมื่อ ที่ </dd>
+					<dt>Question 2</dt>
+					<dd>Answer 2</dd>
+					<dt>Question 3</dt>
+					<dd>Answer 3</dd>
+				</dl>
+			</div>
+			<div class="col-md-6">
+				<dl>
+					<dt>Question 1</dt>
+					<dd>เมื่อ ที่ </dd>
+					<dt>Question 2</dt>
+					<dd>Answer 2</dd>
+					<dt>Question 3</dt>
+					<dd>Answer 3</dd>
+				</dl>
 			</div>
 		</div>
 	</div>

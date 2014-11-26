@@ -149,10 +149,6 @@ section#agenda {
   padding-bottom: 10px;
 }
 
-.faq-item {
-  margin-bottom: 20px;
-}
-
 .card {
 	border-bottom: 3px solid #b4b4b4;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -301,10 +297,26 @@ p.contact-instruction {
 	text-indent: 40px;
 }
 
+section#faq {
+	color: #efefef;
+	font-size: 23px;
+	font-family: "ThaiSansNeue";
+}
+
+dd,
+dt {
+	font-family: "ThaiSansNeue";
+}
+
+dd {
+	margin-bottom: 15px;
+}
+
 .bg-tran { background: transparent; }
 .bg-cyan { background: #00bcd4; }
 .bg-amber { background: #ffc107; }
 .bg-orange { background: #ff9800; }
+.bg-pomegranate { background: #7f8c8d; }
 .bg-brown { background: #795548; }
 .bg-teal { background: #009688; }
 .bg-turquoise { background: #52ad81; }

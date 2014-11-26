@@ -14,7 +14,7 @@ class Register extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('register.start');
+		return View::make('register.begin');
 	}
 
 
@@ -37,10 +37,13 @@ class Register extends \BaseController {
 	public function store()
 	{
 		$validate_rules = array(
+			'prefix' 	 => 'required',	
 			'name'       => 'required',
 			'surname'    => 'required',
+			'gender'	 =>	'required',
 			'email'      => 'required|email',
 			'parent_tel' => 'required|numeric',
+			'tel' 		 => 'numeric',
 		);
 		$validator = Validator::make(Input::all(), $validate_rules);
 		if (!$validator->fails()) {
@@ -60,7 +63,7 @@ class Register extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return View::make('backend.attendee.show', array('attendee' => Attendee::find($id)->get()));
+		//return View::make('backend.attendee.show', array('attendee' => Attendee::find($id)->get()));
 	}
 
 
@@ -72,7 +75,7 @@ class Register extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return View::make('backend.attendee.edit', array('attendee' => Attendee::find($id)->get()));
+		//return View::make('backend.attendee.edit', array('attendee' => Attendee::find($id)->get()));
 	}
 
 

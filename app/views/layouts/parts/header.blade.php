@@ -8,6 +8,9 @@
 
     <!-- Bootstrap -->
     {{ HTML::style('assets/css/bootstrap.min.css') }}
+    {{ HTML::style('assets/css/scrolling-nav.css') }}
+    {{ HTML::style('assets/css/owl.carousel.css') }}
+    {{ HTML::style('assets/css/owl.theme.default.min.css') }}
     {{ HTML::style('assets/css/style.css') }}
     @yield('css')
 
@@ -18,4 +21,4 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="50">

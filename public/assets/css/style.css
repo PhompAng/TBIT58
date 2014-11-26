@@ -1,51 +1,141 @@
+*,
+*:before,
+*:after {
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
 body {
-    font-size: 13px;
-    /*font-family: 'ThaiSansNeue';
-    padding-top: 50px;*/
+	font-size: 13px;
+	/*font-family: 'ThaiSansNeue';
+	padding-top: 50px;*/
 }
 
 @font-face {
-    font-family: 'ThaiSansNeue';
-    src: url('../fonts/thaisansneue-regular-webfont.eot');
-    src: url('../fonts/thaisansneue-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/thaisansneue-regular-webfont.woff') format('woff'),
-         url('../fonts/thaisansneue-regular-webfont.ttf') format('truetype'),
-         url('../fonts/thaisansneue-regular-webfont.svg#thaisans_neueregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'ThaiSansNeue';
-    src: url('../fonts/thaisansneue-bold-webfont.eot');
-    src: url('../fonts/thaisansneue-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/thaisansneue-bold-webfont.woff') format('woff'),
-         url('../fonts/thaisansneue-bold-webfont.ttf') format('truetype'),
-         url('../fonts/thaisansneue-bold-webfont.svg#thaisans_neuebold') format('svg');
-    font-weight: bold;
-    font-style: normal;
+	font-family: 'ThaiSansNeue';
+	src: url('../fonts/thaisansneue-regular-webfont.eot');
+	src: url('../fonts/thaisansneue-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/thaisansneue-regular-webfont.woff') format('woff'),
+		 url('../fonts/thaisansneue-regular-webfont.ttf') format('truetype'),
+		 url('../fonts/thaisansneue-regular-webfont.svg#thaisans_neueregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'ThaiSansNeue';
-    src: url('../fonts/thaisansneue-light-webfont.eot');
-    src: url('../fonts/thaisansneue-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/thaisansneue-light-webfont.woff') format('woff'),
-         url('../fonts/thaisansneue-light-webfont.ttf') format('truetype'),
-         url('../fonts/thaisansneue-light-webfont.svg#thaisans_neuelight') format('svg');
-    font-weight: lighter;
-    font-style: normal;
+	font-family: 'ThaiSansNeue';
+	src: url('../fonts/thaisansneue-bold-webfont.eot');
+	src: url('../fonts/thaisansneue-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/thaisansneue-bold-webfont.woff') format('woff'),
+		 url('../fonts/thaisansneue-bold-webfont.ttf') format('truetype'),
+		 url('../fonts/thaisansneue-bold-webfont.svg#thaisans_neuebold') format('svg');
+	font-weight: bold;
+	font-style: normal;
 
 }
 
-section#intro {
-    padding-top: 70px;
+@font-face {
+	font-family: 'ThaiSansNeue';
+	src: url('../fonts/thaisansneue-light-webfont.eot');
+	src: url('../fonts/thaisansneue-light-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/thaisansneue-light-webfont.woff') format('woff'),
+		 url('../fonts/thaisansneue-light-webfont.ttf') format('truetype'),
+		 url('../fonts/thaisansneue-light-webfont.svg#thaisans_neuelight') format('svg');
+	font-weight: lighter;
+	font-style: normal;
+
+}
+
+body {
+	background-image: url('../img/bg.png');
+	background-attachment: fixed;
+}
+
+h1, h2, h3, h5, h6 {
+	font-family: "ThaiSansNeue";
+	margin-bottom: 0;
+	margin-top: 5px;
+	display: inline-block;
 }
 
 section {
-    height: 500px;
+	padding: 40px 20px 40px 20px;
+	box-shadow: 0px -3px 3px rgba(50, 50, 50, 0.1);
+}
+
+section#intro {
+	padding-top: 80px;
+	padding-bottom: 70px;
+	/*color: #d7d7d7;*/
+	/*background-image: url('../img/bg.png'); */
+}
+
+.logo {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+img#logo {
+	width: 400px;
+	max-width: 100%;
+}
+
+.well.triangle {
+	font-family: "ThaiSansNeue";
+	font-size: 23px;
+	line-height: 1.45em;
+}
+
+.well.triangle:before {
+	content: '';
+	width: 0;
+	height: 0	;
+	position: absolute;
+	top: -15px;
+	left: 48%;
+	border: 8px solid;
+	border-color: transparent transparent #f5f5f5 transparent;
+}
+
+.main_button {
+	height: 49px;
+}
+
+.btn-register {
+	font-family: "ThaiSansNeue";
+	font-size: 20px;
+	font-weight: bold;
+	background: #e67e22;
+	border: none;
+	border-bottom: 3px solid #d35400;
+	-webkit-transition: background 0.5s;
+	-o-transition: background 0.5s;
+	transition: background 0.5s;
+	margin-right: 10px;
+	color: #fff;
+}
+
+.btn-register:hover {
+	background: #f39c12;
+	border-bottom: 3px solid #d35400;
+	color: #fff;
+}
+
+.btn-register:active {
+	border-bottom-width: 2px;
+	margin-top: 1px;
+}
+
+.section-heading {
+	height: 48px;
+	margin-bottom: 30px;
+	max-width: 100%;
+}
+
+section#agenda {
+	font-family: "ThaiSansNeue";
 }
 
 .navbar .navbar-nav {
@@ -58,12 +148,227 @@ section {
   text-align: center;
 }
 
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+  background: #e7e7e7;
+  border-bottom: 3px solid #d7d7d7;
+}
+
+.navbar-nav>li>a {
+  padding-bottom: 10px;
+}
+
+.card {
+	border-bottom: 3px solid #b4b4b4;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+	background: #fff;
+	border-radius: 5px;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+.subject-item {
+  /*height: 300px;*/
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+  float: left;
+}
+
+.subject-item > h4 {
+  background: #e0e0e0;
+  padding: 15px 15px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.subject-item > a {
+	margin-bottom: 15px;
+}
+
+.subject-item > img {
+	width: 150px !important;
+	height: 150px;
+	display: inline !important;
+}
+
+.timeline {
+	border-right: 5px solid #fff;
+}
+
+.timeline-item-r,
+.timeline-item-l {
+	background: rgba(255, 255, 255, 0.9);
+	padding: 20px;
+	padding-bottom: 15px;
+	border-radius: 4px;
+	display: inline-block;
+	margin-bottom: 15px;
+}
+
+.timeline-item-r {
+	margin-top: 25px;
+	float: left;
+}
+.timeline-item-l {
+	margin-bottom: 30px;
+	float: right;
+}
+
+.timeline-item-r:first-child {
+	margin-top: 50px;
+}
+
+.timeline-item-l:last-child {
+	margin-bottom: 70px;
+}
+
+div[class^=timeline-item-]:before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background: #e0e0e0;
+	position: absolute;
+	border: 3px solid #fff;
+	margin-top: 13px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-item-l:before { right: -13px; }
+.timeline-item-r:before { left: -12px; }
+
+.timeline-item-l > h4,
+.timeline-item-r > h4 {
+	padding: 0;
+	margin: 3px 0 8px 0;
+	display: block;
+}
+
+.timeline-item-l > .timeline-icon {
+	font-size: 45px;
+	margin-right: 20px;
+	color: #c0c0c0;
+	height: 50px;
+}
+
+.timeline-item-r > .timeline-icon {
+	font-size: 45px;
+	margin-left: 20px;
+	color: #c0c0c0;
+	height: 50px;
+}
+
+.timeline-content {
+	float: left;
+	font-size: 20px;
+}
+
+.timeline-content > h4 {
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 23px;
+	margin: 0;
+}
+
+.timeline-remark {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.timeline-remark > p {
+	font-size: 20px;
+	margin-bottom: 0;
+}
+
+.well {
+	font-family: "ThaiSansNeue";
+	font-size: 20px;
+	line-height: 27px;
+	color: #333;
+}
+
+section#contact {
+	color: #efefef;
+	font-family: "ThaiSansNeue";
+	font-size: 23px;
+}
+
+.glyphicon-sm {
+	font-size: 15px;
+}
+
+p.contact-instruction {
+	text-indent: 40px;
+}
+
+section#faq {
+	color: #efefef;
+	font-size: 23px;
+	font-family: "ThaiSansNeue";
+}
+
+dd,
+dt {
+	font-family: "ThaiSansNeue";
+	font-size: 22px;
+}
+
+dd {
+	margin-bottom: 15px;
+	line-height: 1.2em;
+}
+
+.transport-icon {
+	height: 100px;
+}
+
+section#register > .container > .card:first-child {
+	padding: 20px 50px 20px 50px;
+}
+
+.form-control {
+	border-radius: 0;
+}
+
+.page-header {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.form-control {
+	font-family: Tahoma;
+	font-size: 14px;
+}
+
+.text-indent {
+	text-indent: 23px;
+}
+
+.bg-tran { background: transparent; }
 .bg-cyan { background: #00bcd4; }
 .bg-amber { background: #ffc107; }
 .bg-orange { background: #ff9800; }
+.bg-pomegranate { background: #7f8c8d; }
 .bg-brown { background: #795548; }
 .bg-teal { background: #009688; }
 .bg-turquoise { background: #52ad81; }
 .bg-plain { background: #f7f7f7; }
 .bg-pink { background: #f06292; }
 .bg-black { background: #282828; }
+
+.bg-gray { background: #b4b4b4; }
+
+
+.bg-river { background: #3498db; }
+.bg-nephritis { background: #27ae60; }
+.bg-orange { background: #f3a01b; }
+.bg-asphalt { background: #34495e; }
+/* Timeline */
+

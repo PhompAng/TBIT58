@@ -63,7 +63,7 @@ class Register extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return View::make('backend.attendee.show', array('attendee' => Attendee::find($id)->get()));
+		//return View::make('backend.attendee.show', array('attendee' => Attendee::find($id)->get()));
 	}
 
 
@@ -75,7 +75,7 @@ class Register extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return View::make('backend.attendee.edit', array('attendee' => Attendee::find($id)->get()));
+		//return View::make('backend.attendee.edit', array('attendee' => Attendee::find($id)->get()));
 	}
 
 

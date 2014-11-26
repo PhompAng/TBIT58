@@ -5,9 +5,6 @@
 <section id="register">
 	<div class="container">
 		<div class="card">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quibusdam dignissimos sequi atque natus, quod commodi, distinctio modi amet enim, hic architecto! Tempora exercitationem optio non temporibus repellat explicabo molestiae repellendus illum aut magnam sapiente rerum sint provident eos placeat ducimus autem voluptas laboriosam mollitia, at expedita odio delectus. Ratione aliquid quo, quos ducimus doloremque fugiat. Nemo fugiat mollitia, quod, nulla quasi quia voluptate quam asperiores, eaque vero doloremque dolores dignissimos id ullam eos beatae labore, in! Voluptatum voluptate velit perspiciatis accusamus mollitia saepe libero unde obcaecati tenetur ab reiciendis iure veritatis minima cumque officiis, quam voluptates. Eius, doloribus, ad.
-		</div>
-		<div class="card">
 			<div class="row">
 				<div class="col-xs-12 text-center"><img src="{{URL::to('/assets/text/heading_register.svg')}}" class="section-heading" alt=""></div>
 				{{Form::open(array('url' => 'register/', 'method' => 'post'))}}
@@ -87,14 +84,14 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-1">
+					<div class="col-md-2">
 						<div class="form-group @if ($errors->has('class')) has-error @endif">
 							{{Form::label('class', 'ระดับชั้น', array('class' => 'control-label'))}}
 							{{Form::select('class', array('4' => 'ม.4', '5' => 'ม.5', '6' => 'ม.6', 'vc' => 'ปวช.', 'other' => 'อื่นๆ'), Input::old('class'), array('class' => 'form-control'))}}
 							@if ($errors->has('class')) <p class="help-block">{{ $errors->first('class') }}</p> @endif
 						</div>
 					</div>
-					<div class="col-md-5">
+					<div class="col-md-4">
 						<div class="form-group @if ($errors->has('school')) has-error @endif">
 							{{Form::label('school', 'โรงเรียน', array('class' => 'control-label'))}}
 							{{Form::text('school', Input::old('school'), array('class' => 'form-control'))}}
@@ -212,7 +209,8 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
-						{{Form::submit('ส่งใบสมัคร', array('class' => 'btn btn-primary btn-block', 'id' => 'register_button'))}}
+						{{Form::submit('ส่งใบสมัคร', array('class' => 'btn btn-primary btn-block btn-register'))}}
+					</div>
 				</div>
 				{{Form::close()}}
 			</div><!-- End card structure -->

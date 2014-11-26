@@ -14,7 +14,7 @@ class Register extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('register.start');
+		return View::make('register.begin');
 	}
 
 

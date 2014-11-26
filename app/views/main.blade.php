@@ -35,7 +35,7 @@
 					ไม่ว่าน้องจะจบ ม.ปลาย สายไหน หรือปวช. จากที่ใด และหากน้องเป็นผู้ที่สนใจจะศึกษาต่อในคณะ IT... แต่ยังหาคนติวให้ไม่ได้ หรือหาได้แล้วก็ห้ามพลาด!?! เพราะโอกาสดีๆ มาถึงแล้ว เพียงน้องมาติวกับพี่ๆ คณะไอทีลาดกระบังในโครงการ "ToBeIT@KMITL ‘58 (ติวน้องสอบตรงไอทีลาดกระบัง 58)"
 				</div>
 				<div class="main_button text-center">
-					<a href="{{URL::to('/register/create')}}" id="register_button" class="page-scroll btn btn-lg btn-primary">ลงทะเบียนเข้าร่วมโครงการ</a>
+					<a href="{{URL::to('/register')}}" class="page-scroll btn-register btn btn-lg">ลงทะเบียนเข้าร่วมโครงการ</a>
 				</div>
 			</div>
 		</div>

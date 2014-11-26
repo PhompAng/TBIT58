@@ -185,10 +185,10 @@
 					สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ตั้งอยู่บริเวณฝั่งตะวันออกของกรุงเทพมหานคร อยู่ในพื้นที่เขตลาดกระบัง ทางทิศเหนือของท่าอากาศยานสุวรรณภูมิ ทิศเหนือติดกับถนนมอเตอร์เวย์ กรุงเทพ-ชลบุรี (สายใหม่) ทิศใต้ติดกับคลองประเวศบุรีรมย์ มีถนนฉลองกรุงตัดผ่านกลางสถาบันในทิศตะวันออกเฉียงเหนือ-ใต้ และทางรถไฟสายตะวันออกตัดผ่านกลางสถาบันในทิศตะวันออก-ตะวันตก
 				</div>
 				<div class="row">
-					<div class="col-sm-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-4" target="_blank" class="btn btn-block btn-sm btn-primary"><img src="http://placehold.it/100x100" width="100%" alt=""></a></div>
-					<div class="col-sm-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-5" target="_blank" class="btn btn-block btn-sm btn-primary">รถไฟฟ้า</a></div>
-					<div class="col-sm-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-6" target="_blank" class="btn btn-block btn-sm btn-primary">รถประจำทาง</a></div>
-					<div class="col-sm-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-7" target="_blank" class="btn btn-block btn-sm btn-primary">รถยนต์ส่วนตัว</a></div>
+					<div class="col-xs-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-4" target="_blank" class="btn btn-block btn-sm btn-default"><img src="" class="transport-icon" alt=""></a></div>
+					<div class="col-xs-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-5" target="_blank" class="btn btn-block btn-sm btn-default"><img src="" class="transport-icon" alt=""></a></div>
+					<div class="col-xs-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-6" target="_blank" class="btn btn-block btn-sm btn-default"><img src="" class="transport-icon" alt=""></a></div>
+					<div class="col-xs-6 col-md-3"><a href="http://www.it.kmitl.ac.th/about/contact/map#header-7" target="_blank" class="btn btn-block btn-sm btn-default"><img src="" class="transport-icon" alt=""></a></div>
 				</div>
 			</div>
 		</div>

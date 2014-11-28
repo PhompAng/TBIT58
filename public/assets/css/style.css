@@ -8,8 +8,6 @@
 
 body {
 	font-size: 13px;
-	/*font-family: 'ThaiSansNeue';
-	padding-top: 50px;*/
 }
 
 @font-face {
@@ -330,7 +328,14 @@ section#register > .container > .card:first-child {
 	padding: 20px 50px 20px 50px;
 }
 
-/*Bootstrap Tweaks */
+.attendee-id {
+	font-size: 35px;
+	font-family: "ThaiSansNeue";
+	font-weight: bold;
+	color: #e67e22;
+}
+
+/* Bootstrap Tweaks */
 
 .well {
 	font-family: "ThaiSansNeue";
@@ -367,6 +372,12 @@ section#register > .container > .card:first-child {
 
 .input-group-addon {
 	border-radius: 0;
+}
+
+td, th {
+	background: #fff;
+	font-family: "ThaiSansNeue";
+	font-size: 20px;
 }
 
 .bg-tran { background: transparent; }

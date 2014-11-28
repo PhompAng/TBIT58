@@ -10,7 +10,7 @@
 				<div class="col-md-8 col-md-offset-2">
 					<dl>
 						<dt><span class="glyphicon glyphicon-calendar glyphicon-sm"></span> <h2>วันที่มีการติว</h2></dt>
-						<dd class="text-indent">วันที่ 10, 11, 24, 25, 31 มกราคม 2558 และ 1 กุมภาพันธ์ 2558 เป็น Quiz (โจทย์และแบบฝึกหัด) ของเนื้อหาทั้งหมดที่เรียนมา</dd>
+						<dd class="text-indent">วันที่ 10, 11, 24, 25, 31 มกราคม 2558 ส่วนวันที่ 1 กุมภาพันธ์ 2558 เป็น Quiz (แบบฝึกหัด) ของเนื้อหาที่ติวมาทั้งหมด</dd>
 						<dt><span class="glyphicon glyphicon-time glyphicon-sm"></span> <h2>เวลา</h2></dt>
 						<dd class="text-indent">เริ่มติว 9.00 น. ถึง 16.00 น. (พักกลางวัน 12.00-12.30 น.)</dd>
 						<dt><span class="glyphicon glyphicon-map-marker glyphicon-sm"></span> <h2>สถานที่</h2></dt>

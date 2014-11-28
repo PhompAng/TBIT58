@@ -17,7 +17,7 @@
 			<li><a class="page-scroll" href="#agenda">กำหนดการ</a></li>
 			<li><a class="page-scroll" href="#course">เนื้อหาและเอกสาร</a></li>
 			<li><a class="page-scroll" href="#transportation">การเดินทาง</a></li>
-			<!--<li><a class="page-scroll" href="#faq">ถามตอบ</a></li>-->
+			<li><a class="page-scroll" href="#faq">ถามตอบ</a></li>
 			<li><a class="page-scroll" href="#contact">ติดต่อสอบถาม</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
@@ -112,6 +112,42 @@
 			</div>
 			<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
 				<div class="timeline-remark card">
+					<div class="table-responsive">
+						<table class="table table-bordered table-condensed table-striped">
+							<thead>
+								<th class="text-center">วันที่</th>
+								<th colspan="2" class="text-center">วิชา</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td>10 มกราคม</td>
+									<td>Hardware</td>
+									<td>Software</td>
+								</tr>
+								<tr>
+									<td>11 มกราคม</td>
+									<td colspan="2">Logic & Ethics</td>
+								</tr>
+								<tr>
+									<td>24 มกราคม</td>
+									<td>Database</td>
+									<td>Website & Multimedia</td>
+								</tr>
+								<tr>
+									<td>25 มกราคม</td>
+									<td colspan="2">Network</td>
+								</tr>
+								<tr>
+									<td>31 มกราคม</td>
+									<td colspan="2">Programming & Math</td>
+								</tr>
+								<tr>
+									<td>1 กุมภาพันธ์</td>
+									<td colspan="2">Quiz</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 					<p><strong>ติวทุกวันเสาร์-อาทิตย์ เว้นวันที่ 17, 18 มกราคม 2558</strong></p>
 					<p>เวลา 9.00 น. ถึง 16.00 น. (พักเที่ยง 12.00 ถึง 12.30 น.)</p>
 					<p>แต่งกายด้วยชุดไปรเวทสุภาพ กางเกงขายาว รองเท้าหุ้มส้น ห้ามรองเท้าแตะ!</p>
@@ -195,7 +231,7 @@
 	</div>
 </section>
 
-<!--<section id="faq" class="bg-pomegranate">
+<section id="faq" class="bg-pomegranate">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 text-center">
@@ -205,27 +241,27 @@
 		<div class="row">
 			<div class="col-md-6">
 				<dl>
-					<dt>Question 1</dt>
-					<dd>เมื่อ ที่ </dd>
-					<dt>Question 2</dt>
-					<dd>Answer 2</dd>
-					<dt>Question 3</dt>
-					<dd>Answer 3</dd>
+					<dt>Q : จำเป็นต้องมาติวทุกวันไหม?</dt>
+					<dd>A : ไม่จำเป็นครับ มาติวเฉพาะวันที่น้องๆ สะดวกก็ได้ครับ</dd>
+					<dt>Q : ไม่ได้สมัครรับตรงของคณะฯ มาติวได้ไหม?</dt>
+					<dd>A : ได้ครับ ขอแค่น้องๆ สนใจที่จะมาติวก็พอครับ</dd>
+					<dt>Q : ลงทะเบียนออนไลน์แล้ว ต้องส่งเอกสารอะไรมาที่คณะไหม?</dt>
+					<dd>A : ไม่ต้องส่งเอกสารใดๆ มาที่คณะครับ เจอกันวันติวได้เลยครับ</dd>
 				</dl>
 			</div>
 			<div class="col-md-6">
 				<dl>
-					<dt>Question 1</dt>
-					<dd>เมื่อ ที่ </dd>
-					<dt>Question 2</dt>
-					<dd>Answer 2</dd>
-					<dt>Question 3</dt>
-					<dd>Answer 3</dd>
+					<dt>Q : ถ้าไม่สะดวกพิมพ์เอกสารมาเอง มีเอกสารให้ไหม?</dt>
+					<dd>A : มีจำหน่ายหน้างานครับ แต่จะเป็นเอกสารแบบขาวดำนะครับ</dd>
+					<dt>Q : ต้องเสียค่าสมัครไหม?</dt>
+					<dd>A : โครงการนี้ติวฟรีไม่มีค่าใช้จ่ายใดๆ ครับ</dd>
+					<dt>Q : ลงทะเบียนเสร็จแล้ว ลืมรหัสที่ใช้รายงานตัวต้องทำอย่างไร?</dt>
+					<dd>A : น้องสามารถเช็คอีเมล์ที่ใช้ลงทะเบียนไว้ได้เลยครับ หรือหากไม่พบอีเมล์ให้ส่งข้อความมายังแฟนเพจตามลิ้งค์ด้านล่างครับ</dd>
 				</dl>
 			</div>
 		</div>
 	</div>
-</section>-->
+</section>
 
 <section id="contact" class="bg-black">
 	<div class="container">
@@ -234,7 +270,7 @@
 				<img class="section-heading" src="{{URL::to('/assets/text/heading_contact.svg')}}">
 			</div>
 			<div class="col-md-6">
-				<p class="contact-instruction">หากน้องๆ มีข้อสงสัยในโครงการ เช่น ต้องมาลงทะเบียนที่คณะไหม? เลิกกี่โมง? ต้องมาทุกวันไหม? ฯลฯ ลองอ่านส่วน <a href="#faq" class="page-scroll">ถามตอบ</a> ดูก่อนนะครับ หากยังไม่พบสิ่งที่ต้องการ ส่งข้อความมาทางแฟนเพจ โพสถามในกลุ่มบน Facebook หรือจะโทรหาพี่ๆ ผู้ดูแลโครงการก็ได้ครับ :D</p>
+				<p class="contact-instruction">หากน้องๆ มีข้อสงสัยในโครงการ เช่น ต้องมาลงทะเบียนที่คณะไหม? เลิกกี่โมง? ต้องมาทุกวันไหม? ฯลฯ ลองอ่านส่วน <a href="#faq" class="page-scroll">ถามตอบ</a> ดูก่อนนะครับ หากยังไม่พบคำตอบ ส่งข้อความมาทางแฟนเพจ โพสถามในกลุ่มบน Facebook หรือจะโทรหาพี่ๆ ผู้ดูแลโครงการก็ได้ครับ :D</p>
 			</div>
 			<div class="col-md-6">
 				<div class="well">

@@ -351,6 +351,10 @@ section#register > .container > .card:first-child {
 	text-indent: 23px;
 }
 
+.radio-inline {
+	white-space: nowrap;
+}
+
 .bg-tran { background: transparent; }
 .bg-cyan { background: #00bcd4; }
 .bg-amber { background: #ffc107; }

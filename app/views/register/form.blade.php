@@ -14,14 +14,14 @@
 							<h2>ข้อมูลส่วนตัว</h2>
 						</div>
 					</div>
-					<div class="col-xs-3 col-md-2">
+					<div class="col-sm-3 col-md-2">
 						<div class="form-group @if ($errors->has('prefix')) has-error @endif">
 							<label for="prefix" class="control-label">คำนำหน้า<span class="text-danger">*</span></label>
 							{{Form::text('prefix', Input::old('prefix'), array('class' => 'form-control'))}}
 							@if ($errors->has('prefix')) <p class="help-block">{{ $errors->first('prefix') }}</p> @endif
 						</div>
 					</div>
-					<div class="col-xs-9 col-md-4">
+					<div class="col-sm-9 col-md-4">
 						<div class="form-group @if ($errors->has('name')) has-error @endif">
 							<label for="name" class="control-label">ชื่อ<span class="text-danger">*</span></label>
 							{{Form::text('name', Input::old('name'), array('class' => 'form-control'))}}
@@ -87,7 +87,7 @@
 					<div class="col-md-2">
 						<div class="form-group @if ($errors->has('class')) has-error @endif">
 							<label for="class" class="control-label">ระดับชั้น</label>
-							{{Form::select('class', array(NULL => '0', 4 => 'ม.4', 5 => 'ม.5', 6 => 'ม.6', 7 => 'ปวช.', 8 => 'อื่นๆ'), Input::old('class'), array('class' => 'form-control'))}}
+							{{Form::select('class', array(NULL => 'ไม่ระบุ', 4 => 'ม.4', 5 => 'ม.5', 6 => 'ม.6', 7 => 'ปวช.', 8 => 'อื่นๆ'), Input::old('class'), array('class' => 'form-control'))}}
 							@if ($errors->has('class')) <p class="help-block">{{ $errors->first('class') }}</p> @endif
 						</div>
 					</div>

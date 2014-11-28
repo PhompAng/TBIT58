@@ -40,8 +40,8 @@ class Register extends \BaseController {
 	{
 		$validate_rules = array(
 			'prefix' 	 => 'required',	
-			'name'       => 'required',
-			'surname'    => 'required',
+			'name'       => 'required|alpha',
+			'surname'    => 'required|alpha',
 			'gender'	 =>	'required',
 			'email'      => 'required|email',
 			'parent_tel' => 'required|regex:/^0([8,9])([0-9]{8})$/',

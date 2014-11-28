@@ -52,7 +52,13 @@ class Register extends \BaseController {
 			$attendee_id = Attendee::create(Input::all())->id;
 			$attendee_id = str_repeat("0", 6-strlen($attendee_id)).$attendee_id;
 			$data = array('title' 		=> "ลงทะเบียนสำเร็จ! - ToBeIT@KMITL '58",
-						  'attendee_id' => $attendee_id);
+						  'attendee_id' => $attendee_id,
+						  'firstname'	=> Input::get('name'),
+						  'lastname'	=> Input::get('surname'));
+			Mail::send('mail.confirm', $data, function($message)
+			{
+			    $message->to(Input::get('email'), Input::get('name')." ".Input::get('surname'))->subject('การลงทะเบียนเข้าร่วมโครงการ ToBeIT@KMITL \'58 สำเร็จ!');
+			});
 			return View::make('register.done', $data);
 		} else {
 			return Redirect::to('/register/create/')->withErrors($validator)->withInput();

@@ -12,7 +12,7 @@
 				</div>
 				<div class="col-xs-12 text-center">
 					<hr>
-					<div class="text-center"><p class="attendee-id">เลขที่ใบสมัครของน้องคือ {{$attendee_id}}<p><span class="text-muted">เมื่อถึงคณะ ให้น้องๆ แจ้งเลขนี้เพื่อรายงานตัวนะครับ หากลืมรหัสให้แจ้งชื่อ-นามสกุลแทนครับ</span></div>
+					<div class="text-center"><p class="attendee-id">เลขที่ใบสมัครของน้องคือ {{Session::get('attendee_id')}}<p><span class="text-muted">เมื่อถึงคณะ ให้น้องๆ แจ้งเลขนี้เพื่อรายงานตัวนะครับ หากลืมรหัสให้แจ้งชื่อ-นามสกุลแทนครับ</span></div>
 					<div class="alert alert-success">ลงทะเบียนเสร็จแล้ว อย่าลืมเข้าไป Join กลุ่ม <a href="https://www.facebook.com/groups/kmitltobeit/">ToBeIT@KMITL</a> บน Facebook กันนะครับ :3</div>
 					<a href="{{URL::to('/')}}" class="btn btn-default btn-sm">กลับหน้าหลัก</a>
 				</div>

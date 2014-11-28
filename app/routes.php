@@ -16,4 +16,13 @@ Route::get('/', function()
 	return View::make('main');
 });
 
+Route::get('register/success', function()
+{
+	if(Session::get('attendee_id') != ""){
+		return View::make('register.done');
+	} else {
+		return Redirect::to('/');
+	}
+});
+
 Route::resource('register', 'Register');

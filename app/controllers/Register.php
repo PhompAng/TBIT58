@@ -49,8 +49,10 @@ class Register extends \BaseController {
 		);
 		$validator = Validator::make(Input::all(), $validate_rules);
 		if (!$validator->fails()) {
-			Attendee::create(Input::all());
-			$data = array('title' => "ลงทะเบียนสำเร็จ! - ToBeIT@KMITL '58", );
+			$attendee_id = Attendee::create(Input::all())->id;
+			$attendee_id = str_repeat("0", 6-strlen($attendee_id)).$attendee_id;
+			$data = array('title' 		=> "ลงทะเบียนสำเร็จ! - ToBeIT@KMITL '58",
+						  'attendee_id' => $attendee_id);
 			return View::make('register.done', $data);
 		} else {
 			return Redirect::to('/register/create/')->withErrors($validator)->withInput();

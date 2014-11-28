@@ -49,8 +49,9 @@ body {
 }
 
 body {
-	background-image: url('../img/bg.png');
+	background-image: url('../img/bg@2x.png');
 	background-attachment: fixed;
+	background-size: 554px 480px;
 }
 
 h1, h2, h3, h5, h6 {
@@ -61,9 +62,27 @@ h1, h2, h3, h5, h6 {
 }
 
 section {
-	padding: 40px 20px 40px 20px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 	box-shadow: 0px -3px 3px rgba(50, 50, 50, 0.1);
 }
+
+.section-heading {
+	height: 48px;
+	margin-bottom: 30px;
+	max-width: 100%;
+}
+
+.card {
+	border-bottom: 3px solid #b4b4b4;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+	background: #fff;
+	border-radius: 5px;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+/* Intro */
 
 section#intro {
 	padding-top: 80px;
@@ -99,10 +118,6 @@ img#logo {
 	border-color: transparent transparent #f5f5f5 transparent;
 }
 
-.main_button {
-	height: 49px;
-}
-
 .btn-register {
 	font-family: "ThaiSansNeue";
 	font-size: 20px;
@@ -128,15 +143,7 @@ img#logo {
 	margin-top: 1px;
 }
 
-.section-heading {
-	height: 48px;
-	margin-bottom: 30px;
-	max-width: 100%;
-}
-
-section#agenda {
-	font-family: "ThaiSansNeue";
-}
+/* Navbar */
 
 .navbar .navbar-nav {
   display: inline-block;
@@ -155,18 +162,11 @@ section#agenda {
   border-bottom: 3px solid #d7d7d7;
 }
 
-.navbar-nav>li>a {
+.navbar-nav > li > a {
   padding-bottom: 10px;
 }
 
-.card {
-	border-bottom: 3px solid #b4b4b4;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-	background: #fff;
-	border-radius: 5px;
-	padding: 15px;
-	margin-bottom: 15px;
-}
+/* Course list */
 
 .subject-item {
   /*height: 300px;*/
@@ -197,6 +197,12 @@ section#agenda {
 	width: 150px !important;
 	height: 150px;
 	display: inline !important;
+}
+
+/* Timeline */
+
+section#agenda {
+	font-family: "ThaiSansNeue";
 }
 
 .timeline {
@@ -287,12 +293,7 @@ div[class^=timeline-item-]:before {
 	margin-bottom: 0;
 }
 
-.well {
-	font-family: "ThaiSansNeue";
-	font-size: 20px;
-	line-height: 27px;
-	color: #333;
-}
+/* Contact */
 
 section#contact {
 	color: #efefef;
@@ -300,13 +301,11 @@ section#contact {
 	font-size: 23px;
 }
 
-.glyphicon-sm {
-	font-size: 15px;
-}
-
 p.contact-instruction {
 	text-indent: 40px;
 }
+
+/* FAQs */
 
 section#faq {
 	color: #efefef;
@@ -325,12 +324,23 @@ dd {
 	line-height: 1.2em;
 }
 
-.transport-icon {
-	height: 100px;
-}
+/* Register Page */
 
 section#register > .container > .card:first-child {
 	padding: 20px 50px 20px 50px;
+}
+
+/*Bootstrap Tweaks */
+
+.well {
+	font-family: "ThaiSansNeue";
+	font-size: 20px;
+	line-height: 27px;
+	color: #333;
+}
+
+.glyphicon-sm {
+	font-size: 15px;
 }
 
 .form-control {
@@ -348,7 +358,7 @@ section#register > .container > .card:first-child {
 }
 
 .text-indent {
-	text-indent: 23px;
+	text-indent: 40px;
 }
 
 .radio-inline {
@@ -366,13 +376,8 @@ section#register > .container > .card:first-child {
 .bg-plain { background: #f7f7f7; }
 .bg-pink { background: #f06292; }
 .bg-black { background: #282828; }
-
 .bg-gray { background: #b4b4b4; }
-
-
 .bg-river { background: #3498db; }
 .bg-nephritis { background: #27ae60; }
 .bg-orange { background: #f3a01b; }
 .bg-asphalt { background: #34495e; }
-/* Timeline */
-

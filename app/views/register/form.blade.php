@@ -101,9 +101,12 @@
 					<div class="col-md-6">
 						<div class="form-group @if ($errors->has('facebook_url')) has-error @endif">
 							<label for="facebook_url" class="control-label">Facebook URL </label>
-							{{Form::text('facebook_url', Input::old('facebook_url'), array('class' => 'form-control', 'placeholder' => 'https://www.facebook.com/username'))}}
-							@if ($errors->has('facebook_url')) <p class="help-block">{{ $errors->first('facebook_url') }}</p> @endif
-						</div>
+					    <div class="input-group">
+					      <div class="input-group-addon">https://www.facebook.com/</div>
+					      {{Form::text('facebook_url', Input::old('facebook_url'), array('class' => 'form-control', 'placeholder' => 'username'))}}
+					    </div>
+					    <p class="help-block">เปิดหน้าโปรไฟล์ของน้อง แล้วคัดลอก URL มาวางได้เลยครับ</p>
+					  </div>
 					</div>
 				</div>
 				<div class="row">

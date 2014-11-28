@@ -365,6 +365,10 @@ section#register > .container > .card:first-child {
 	white-space: nowrap;
 }
 
+.input-group-addon {
+	border-radius: 0;
+}
+
 .bg-tran { background: transparent; }
 .bg-cyan { background: #00bcd4; }
 .bg-amber { background: #ffc107; }

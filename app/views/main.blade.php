@@ -234,7 +234,7 @@
 				<img class="section-heading" src="{{URL::to('/assets/text/heading_contact.svg')}}">
 			</div>
 			<div class="col-md-6">
-				<p class="contact-instruction">หากน้องๆ มีข้อสงสัยในโครงการ ไม่ว่าจะเป็น... ต้องมาลงทะเบียนที่คณะไหม? เลิกกี่โมง? ต้องมาทุกวันไหม? ฯลฯ ลองอ่านส่วน <!--<a href="#faq" class="page-scroll">-->ถามตอบ<!--</a>--> ดูก่อนนะครับ หากยังไม่พบสิ่งที่ต้องการ ส่งข้อความมาทางแฟนเพจ หรือจะโทรหาพี่ๆ ผู้ดูแลโครงการก็ได้ครับ :D</p>
+				<p class="contact-instruction">หากน้องๆ มีข้อสงสัยในโครงการ เช่น ต้องมาลงทะเบียนที่คณะไหม? เลิกกี่โมง? ต้องมาทุกวันไหม? ฯลฯ ลองอ่านส่วน <a href="#faq" class="page-scroll">ถามตอบ</a> ดูก่อนนะครับ หากยังไม่พบสิ่งที่ต้องการ ส่งข้อความมาทางแฟนเพจ โพสถามในกลุ่มบน Facebook หรือจะโทรหาพี่ๆ ผู้ดูแลโครงการก็ได้ครับ :D</p>
 			</div>
 			<div class="col-md-6">
 				<div class="well">
@@ -244,7 +244,8 @@
 							<span class="glyphicon glyphicon-earphone glyphicon-sm"></span> พี่ต้น : 081-804-8870
 						</div>
 						<div class="col-sm-6">
-							<span class="glyphicon glyphicon-envelope glyphicon-sm"></span>  <a href="https://www.facebook.com/messages/289696517715853">ส่งข้อความผ่าน Facebook</a>
+							<span class="glyphicon glyphicon-envelope glyphicon-sm"></span>  <a href="https://www.facebook.com/messages/289696517715853">ส่งข้อความผ่าน Facebook</a><br>
+							<span class="glyphicon glyphicon-th glyphicon-sm"></span>  <a href="https://www.facebook.com/groups/kmitltobeit/">กลุ่ม ToBeIT@KMITL บน Facebook</a>
 						</div>
 					</div>
 				</div>

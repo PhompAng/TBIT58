@@ -12,6 +12,7 @@
 				</div>
 				<div class="col-xs-12 text-center">
 					<br>
+					<div class="alert alert-success">ลงทะเบียนเสร็จแล้ว เข้าไป Join กลุ่ม <a href="https://www.facebook.com/groups/kmitltobeit/">ToBeIT@KMITL</a> บน Facebook กันนะครับ</div>
 					<a href="{{URL::to('/')}}" class="btn btn-default btn-sm">กลับหน้าหลัก</a>
 				</div>
 			</div>

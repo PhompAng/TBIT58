@@ -214,7 +214,7 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
-						{{Form::submit('ส่งใบสมัคร', array('class' => 'btn btn-primary btn-block btn-register'))}}
+						{{Form::submit('ส่งใบลงทะเบียน', array('class' => 'btn btn-primary btn-block btn-register'))}}
 					</div>
 				</div>
 				{{Form::close()}}

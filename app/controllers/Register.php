@@ -14,7 +14,8 @@ class Register extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('register.begin');
+		$data = array('title' => "ลงทะเบียนเข้าร่วมโครงการ - ToBeIT@KMITL '58", );
+		return View::make('register.begin', $data);
 	}
 
 
@@ -25,7 +26,8 @@ class Register extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('register.form');
+		$data = array('title' => "ลงทะเบียนเข้าร่วมโครงการ - ToBeIT@KMITL '58", );
+		return View::make('register.form', $data);
 	}
 
 
@@ -48,7 +50,8 @@ class Register extends \BaseController {
 		$validator = Validator::make(Input::all(), $validate_rules);
 		if (!$validator->fails()) {
 			Attendee::create(Input::all());
-			return View::make('register.done');
+			$data = array('title' => "ลงทะเบียนสำเร็จ! - ToBeIT@KMITL '58", );
+			return View::make('register.done', $data);
 		} else {
 			return Redirect::to('/register/create/')->withErrors($validator)->withInput();
 		}

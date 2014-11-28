@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{{ $title or 'ToBeIT@KMITL \'58' }}}</title>
+    <title>{{{ $title or 'ติวน้องสอบตรงไอทีลาดกระบัง \'58 | ToBeIT@KMITL \'58' }}}</title>
 
     <!-- Bootstrap -->
     {{ HTML::style('assets/css/bootstrap.min.css') }}

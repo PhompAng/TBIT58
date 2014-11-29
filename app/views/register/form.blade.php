@@ -231,5 +231,14 @@
 		$('.btn-register').addClass('disabled');
 		$('.btn-register').attr('value', 'กำลังส่งข้อมูล...');
 	});
+
+	$(document).ready(function() {
+	  $(window).keydown(function(event){
+	    if(event.keyCode == 13) {
+	      event.preventDefault();
+	      return false;
+	    }
+	  });
+	});
 	</script>
 @stop

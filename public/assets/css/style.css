@@ -195,6 +195,14 @@ img#logo {
 	display: inline !important;
 }
 
+.owl-dots {
+	display: none !important;
+}
+
+.owl-theme .owl-controls .owl-nav [class*=owl-] {
+	color: #333;
+}
+
 /* Timeline */
 
 section#agenda {

@@ -331,8 +331,13 @@
 		768 : { items: 2 },
 		970 : { items: 4},
 		1170 : { items: 5 }
-		}
+		},
+		nav: true,
+		loop: true,
 	});
+
+	$('.owl-prev').html('<<');
+	$('.owl-next').html('>>');
 
 </script>
 @stop

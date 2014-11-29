@@ -44,8 +44,8 @@ class Register extends \BaseController {
 			'surname'    => 'required|alpha',
 			'gender'	 =>	'required',
 			'email'      => 'required|email',
-			'parent_tel' => 'required|regex:/^0([8,9])([0-9]{8})$/',
-			'tel' 		 => 'regex:/^0([8,9])([0-9]{8})$/',
+			'parent_tel' => 'required|numeric|digits_between:9,10',
+			'tel' 		 => 'numeric|digits_between:9,10',
 		);
 		$validator = Validator::make(Input::all(), $validate_rules);
 		if (!$validator->fails()) {

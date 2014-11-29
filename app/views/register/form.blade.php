@@ -222,11 +222,14 @@
 		</div>
 	</div>
 </section>
-		
-						
-						
-						
-						
-						
 
+@stop
+
+@section('js')
+	<script>
+	$('.btn-register').click(function(){
+		$('.btn-register').addClass('disabled');
+		$('.btn-register').attr('value', 'กำลังส่งข้อมูล...');
+	});
+	</script>
 @stop

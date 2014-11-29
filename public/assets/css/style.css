@@ -6,10 +6,6 @@
 	text-rendering: optimizeLegibility;
 }
 
-body {
-	font-size: 13px;
-}
-
 @font-face {
 	font-family: 'ThaiSansNeue';
 	src: url('../fonts/thaisansneue-regular-webfont.eot');
@@ -50,6 +46,7 @@ body {
 	background-image: url('../img/bg@2x.png');
 	background-attachment: fixed;
 	background-size: 554px 480px;
+	font-size: 13px;
 }
 
 h1, h2, h3, h5, h6 {
@@ -128,6 +125,7 @@ img#logo {
 	transition: background 0.5s;
 	margin-right: 10px;
 	color: #fff;
+	margin-bottom: 20px;
 }
 
 .btn-register:hover {
@@ -378,6 +376,16 @@ td, th {
 	background: #fff;
 	font-family: "ThaiSansNeue";
 	font-size: 20px;
+}
+
+/* Social Widgets */
+
+.social {
+	margin-bottom: 20px;
+}
+
+.social > iframe {
+	width: 120px !important;
 }
 
 .bg-tran { background: transparent; }

@@ -19,6 +19,7 @@
     {{ HTML::style('assets/css/owl.theme.default.min.css') }}
     {{ HTML::style('assets/css/style.css') }}
     @yield('css')
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

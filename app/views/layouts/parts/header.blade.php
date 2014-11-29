@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{{ $title or 'ติวน้องสอบตรงไอทีลาดกระบัง \'58 | ToBeIT@KMITL \'58' }}}</title>
 
+    <meta property="og:title" content="ติวน้องสอบตรงไอทีลาดกระบัง '58 (ToBeIT@KMITL '58)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://tobe.it.kmitl.ac.th/2014/" />
+    <meta property="og:image" content="http://tobe.it.kmitl.ac.th/2014/assets/img/banner.png" />
+    <meta property="og:description" content="ToBeIT@KMITL - ติวน้องสอบตรงไอทีลาดกระบัง โครงการที่ให้น้องๆ ได้เตรียมความพร้อมก่อนเข้าสู่สนามสอบจริง!">
+
     <!-- Bootstrap -->
     {{ HTML::style('assets/css/bootstrap.min.css') }}
     {{ HTML::style('assets/css/scrolling-nav.css') }}

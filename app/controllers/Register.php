@@ -14,7 +14,8 @@ class Register extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('register.start');
+		$data = array('title' => "ลงทะเบียนเข้าร่วมโครงการ - ToBeIT@KMITL '58", );
+		return View::make('register.begin', $data);
 	}
 
 
@@ -25,7 +26,8 @@ class Register extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('register.form');
+		$data = array('title' => "ลงทะเบียนเข้าร่วมโครงการ - ToBeIT@KMITL '58", );
+		return View::make('register.form', $data);
 	}
 
 
@@ -37,15 +39,27 @@ class Register extends \BaseController {
 	public function store()
 	{
 		$validate_rules = array(
-			'name'       => 'required',
-			'surname'    => 'required',
+			'prefix' 	 => 'required',	
+			'name'       => 'required|alpha',
+			'surname'    => 'required|alpha',
+			'gender'	 =>	'required',
 			'email'      => 'required|email',
-			'parent_tel' => 'required|numeric',
+			'parent_tel' => 'required|numeric|digits_between:9,10',
+			'tel' 		 => 'numeric|digits_between:9,10',
 		);
 		$validator = Validator::make(Input::all(), $validate_rules);
 		if (!$validator->fails()) {
-			Attendee::create(Input::all());
-			return View::make('register.done');
+			$attendee_id = Attendee::create(Input::all())->id;
+			$attendee_id = str_repeat("0", 6-strlen($attendee_id)).$attendee_id;
+			$data = array('title' 		=> "ลงทะเบียนสำเร็จ! - ToBeIT@KMITL '58",
+						  'attendee_id' => $attendee_id,
+						  'firstname'	=> Input::get('name'),
+						  'lastname'	=> Input::get('surname'));
+			Mail::queue('mail.confirm', $data, function($message)
+			{
+			    $message->to(Input::get('email'), Input::get('name')." ".Input::get('surname'))->subject('การลงทะเบียนเข้าร่วมโครงการ ToBeIT@KMITL \'58 สำเร็จ!');
+			});
+			return Redirect::to('/register/success/')->with('attendee_id', $attendee_id);
 		} else {
 			return Redirect::to('/register/create/')->withErrors($validator)->withInput();
 		}
@@ -60,7 +74,7 @@ class Register extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return View::make('backend.attendee.show', array('attendee' => Attendee::find($id)->get()));
+		//return View::make('backend.attendee.show', array('attendee' => Attendee::find($id)->get()));
 	}
 
 
@@ -72,7 +86,7 @@ class Register extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return View::make('backend.attendee.edit', array('attendee' => Attendee::find($id)->get()));
+		//return View::make('backend.attendee.edit', array('attendee' => Attendee::find($id)->get()));
 	}
 
 

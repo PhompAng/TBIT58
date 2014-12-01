@@ -16,10 +16,6 @@ Route::get('/', function()
 	return View::make('main');
 });
 
-Route::resource('register', 'Register');
-
-//Route::resource('/backend/attendee', 'BackendController');
-
 Route::get('/backend', 'BackendController@showDashboard');
 Route::get('/backend/login', 'BackendController@showLogin');
 Route::post('/backend/login', 'BackendController@doLogin');
@@ -29,3 +25,15 @@ Route::resource('/backend/attendee', 'AttendeeBackend');
 Route::resource('/backend/checkin', 'CheckInBackend');
 Route::resource('/backend/medical', 'MedicalBackend');
 Route::resource('/backend/user', 'UserBackend');
+
+
+Route::get('register/success', function()
+{
+	if(Session::get('attendee_id') != ""){
+		return View::make('register.done');
+	} else {
+		return Redirect::to('/');
+	}
+});
+
+Route::resource('register', 'Register');

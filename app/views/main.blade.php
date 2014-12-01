@@ -332,8 +332,7 @@
 		970 : { items: 4},
 		1170 : { items: 5 }
 		},
-		nav: true,
-		loop: true,
+		nav: true
 	});
 
 	$('.owl-prev').html('<<');

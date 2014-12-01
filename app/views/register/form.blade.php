@@ -14,14 +14,14 @@
 							<h2>ข้อมูลส่วนตัว</h2>
 						</div>
 					</div>
-					<div class="col-xs-3 col-md-2">
+					<div class="col-sm-3 col-md-2">
 						<div class="form-group @if ($errors->has('prefix')) has-error @endif">
 							<label for="prefix" class="control-label">คำนำหน้า<span class="text-danger">*</span></label>
 							{{Form::text('prefix', Input::old('prefix'), array('class' => 'form-control'))}}
 							@if ($errors->has('prefix')) <p class="help-block">{{ $errors->first('prefix') }}</p> @endif
 						</div>
 					</div>
-					<div class="col-xs-9 col-md-4">
+					<div class="col-sm-9 col-md-4">
 						<div class="form-group @if ($errors->has('name')) has-error @endif">
 							<label for="name" class="control-label">ชื่อ<span class="text-danger">*</span></label>
 							{{Form::text('name', Input::old('name'), array('class' => 'form-control'))}}
@@ -87,7 +87,7 @@
 					<div class="col-md-2">
 						<div class="form-group @if ($errors->has('class')) has-error @endif">
 							<label for="class" class="control-label">ระดับชั้น</label>
-							{{Form::select('class', array(NULL => '0', 4 => 'ม.4', 5 => 'ม.5', 6 => 'ม.6', 7 => 'ปวช.', 8 => 'อื่นๆ'), Input::old('class'), array('class' => 'form-control'))}}
+							{{Form::select('class', array(NULL => 'ไม่ระบุ', 4 => 'ม.4', 5 => 'ม.5', 6 => 'ม.6', 7 => 'ปวช.', 8 => 'อื่นๆ'), Input::old('class'), array('class' => 'form-control'))}}
 							@if ($errors->has('class')) <p class="help-block">{{ $errors->first('class') }}</p> @endif
 						</div>
 					</div>
@@ -101,9 +101,12 @@
 					<div class="col-md-6">
 						<div class="form-group @if ($errors->has('facebook_url')) has-error @endif">
 							<label for="facebook_url" class="control-label">Facebook URL </label>
-							{{Form::text('facebook_url', Input::old('facebook_url'), array('class' => 'form-control', 'placeholder' => 'https://www.facebook.com/username'))}}
-							@if ($errors->has('facebook_url')) <p class="help-block">{{ $errors->first('facebook_url') }}</p> @endif
-						</div>
+					    <div class="input-group">
+					      <div class="input-group-addon">https://www.facebook.com/</div>
+					      {{Form::text('facebook_url', Input::old('facebook_url'), array('class' => 'form-control', 'placeholder' => 'username'))}}
+					    </div>
+					    <p class="help-block">เปิดหน้าโปรไฟล์ของน้อง แล้วคัดลอก URL มาวางได้เลยครับ</p>
+					  </div>
 					</div>
 				</div>
 				<div class="row">
@@ -211,7 +214,7 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
-						{{Form::submit('ส่งใบสมัคร', array('class' => 'btn btn-primary btn-block btn-register'))}}
+						{{Form::submit('ส่งใบลงทะเบียน', array('class' => 'btn btn-primary btn-block btn-register'))}}
 					</div>
 				</div>
 				{{Form::close()}}
@@ -219,11 +222,23 @@
 		</div>
 	</div>
 </section>
-		
-						
-						
-						
-						
-						
 
+@stop
+
+@section('js')
+	<script>
+	$('.btn-register').click(function(){
+		$('.btn-register').addClass('disabled');
+		$('.btn-register').attr('value', 'กำลังส่งข้อมูล...');
+	});
+
+	$(document).ready(function() {
+	  $(window).keydown(function(event){
+	    if(event.keyCode == 13) {
+	      event.preventDefault();
+	      return false;
+	    }
+	  });
+	});
+	</script>
 @stop

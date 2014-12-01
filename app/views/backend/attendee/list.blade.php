@@ -26,11 +26,11 @@
 					<tbody>
 						@foreach ($attendees as $attendee)
 						<tr>
-							<td>{{$attendee->id}}</td>
-							<td><strong>{{$attendee->name}} {{$attendee->surname}}</strong></td>
+							<td>{{str_pad($attendee->id, 6, 0, STR_PAD_LEFT)}}</td>
+							<td><strong>{{$attendee->prefix.$attendee->name}} {{$attendee->surname}}</strong></td>
 							<td>{{$attendee->nickname}}</td>
 							<td>2 Days</td>
-							<td><a href="{{$attendee->facebook_url}}" class="btn btn-xs btn-default">Profile Page</a></td>
+							<td><a href="https://fb.com/{{$attendee->facebook_url}}" class="btn btn-xs btn-default">Profile</a></td>
 							<td>{{$attendee->created_at}}</td>
 							<td>
 								<a href="{{URL::to('/backend/attendee/'.$attendee->id)}}" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>

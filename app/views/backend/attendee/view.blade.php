@@ -6,12 +6,12 @@
 	<div class="col-md-7">
 		<div class="box">
 			<div class="page-header">
-				<h2>Attendee Info <small>(#{{$attendee->id}})</small></h2>
+				<h2>Attendee Info <small>(#{{str_pad($attendee->id, 6, 0, STR_PAD_LEFT)}})</small></h2>
 			</div>
 			<div class="row">
 				<div class="col-sm-5">
 					<span class="field-name">ชื่อ</span>
-					<div class="field-display">{{$attendee->name}}</div>
+					<div class="field-display">{{$attendee->prefix.$attendee->name}}</div>
 				</div>
 				<div class="col-sm-7">
 					<span class="field-name">นามสกุล</span>
@@ -105,7 +105,7 @@
 					<div class="field-display">{{$attendee->return_trip}} Train</div>
 				</div>
 				<div class="col-xs-12">
-					<a href="{{$attendee->facebook_url}}" class="btn btn-sm btn-block btn-default"><i class="glyphicon glyphicon-link"></i> Facebook Profile</a>
+					<a href="https://fb.com/{{$attendee->facebook_url}}" class="btn btn-sm btn-block btn-default"><i class="glyphicon glyphicon-link"></i> Facebook Profile</a>
 				</div>
 			</div><br>
 			<div class="page-header">

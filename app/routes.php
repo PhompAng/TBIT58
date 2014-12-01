@@ -16,15 +16,17 @@ Route::get('/', function()
 	return View::make('main');
 });
 
-Route::get('/backend', 'BackendController@showDashboard');
+Route::group(array('before'=>'auth'), function(){
+	Route::get('/backend', 'BackendController@showDashboard');
+	Route::resource('/backend/attendee', 'AttendeeBackend');
+	Route::resource('/backend/checkin', 'CheckInBackend');
+	Route::resource('/backend/medical', 'MedicalBackend');
+	Route::resource('/backend/user', 'UserBackend');
+});
+
 Route::get('/backend/login', 'BackendController@showLogin');
 Route::post('/backend/login', 'BackendController@doLogin');
 Route::get('/backend/logout', 'BackendController@doLogout');
-
-Route::resource('/backend/attendee', 'AttendeeBackend');
-Route::resource('/backend/checkin', 'CheckInBackend');
-Route::resource('/backend/medical', 'MedicalBackend');
-Route::resource('/backend/user', 'UserBackend');
 
 
 Route::get('register/success', function()

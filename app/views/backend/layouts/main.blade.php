@@ -19,7 +19,7 @@
 
   <div id="page-content-wrapper">
     <div class="page-content inset">
-    	<div id="user_bar">Howdy, Tonsai S. <span class="label label-default">Admin</span></div>
+    	<div id="user_bar">Howdy, {{Auth::user()->name}} {{substr(Auth::user()->surname, 0, 1)}}. <span class="label label-default">Admin</span></div>
     	@yield('content')
     </div>
   </div>

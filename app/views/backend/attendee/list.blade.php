@@ -1,5 +1,11 @@
 @extends('backend.layouts.main')
 
+@section('css')
+
+{{ HTML::style('assets/css/datatables/dataTables.bootstrap.css') }}
+
+@stop
+
 @section('content')
 
 <div class="row">
@@ -8,12 +14,8 @@
 			<div class="page-header">
 				<h1>Attendees List <small>({{$attendees_count}} persons)</small></h1>
 			</div>
-			<div class="actions-btn">
-				<a href="{{URL::to('/backend/attendee/create')}}" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-plus"></i> Add new attendee</a>
-				<a href="#" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete selected</a>
-			</div>
 			<div class="table-responsive">
-				<table class="table table-hover table-striped">
+				<table id="list" class="table table-hover table-striped">
 					<thead>
 						<th>ID</th>
 						<th>Name</th>
@@ -42,14 +44,21 @@
 						@endforeach
 					</tbody>
 				</table>
-				<div class="text-center">{{$attendees->links()}}</div>	
 			</div>
 			<div class="actions-btn">
 				<a href="{{URL::to('/backend/attendee/create')}}" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-plus"></i> Add new attendee</a>
-				<a href="#" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete selected</a>
 			</div>
 		</div>
 	</div>
 </div>
 
+@stop
+
+@section('js')
+
+{{ HTML::script('assets/js/jquery.dataTables.js') }}
+{{ HTML::script('assets/js/dataTables.bootstrap.js') }}
+<script>
+	$('#list').dataTable();
+</script>
 @stop

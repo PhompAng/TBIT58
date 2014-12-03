@@ -15,14 +15,14 @@
 				<h1>Attendees List <small>({{$attendees_count}} persons)</small></h1>
 			</div>
 			<div class="table-responsive">
-				<table id="list" class="table table-hover table-striped">
+				<table class="table table-hover table-striped">
 					<thead>
 						<th>ID</th>
 						<th>Name</th>
 						<th>Nickname</th>
-						<th>Attended</th>
 						<th>Facebook</th>
 						<th>Registered on</th>
+						<th>Updated on</th>
 						<th>Actions</th>
 					</thead>
 					<tbody>
@@ -31,9 +31,9 @@
 							<td>{{str_pad($attendee->id, 6, 0, STR_PAD_LEFT)}}</td>
 							<td><strong>{{$attendee->prefix.$attendee->name}} {{$attendee->surname}}</strong></td>
 							<td>{{$attendee->nickname}}</td>
-							<td>2 Days</td>
 							<td><a href="https://fb.com/{{$attendee->facebook_url}}" class="btn btn-xs btn-default">Profile</a></td>
 							<td>{{$attendee->created_at}}</td>
+							<td>{{$attendee->updated_at}}</td>
 							<td>
 								<a href="{{URL::to('/backend/attendee/'.$attendee->id)}}" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a>
 								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i></a>
@@ -59,6 +59,6 @@
 {{ HTML::script('assets/js/jquery.dataTables.js') }}
 {{ HTML::script('assets/js/dataTables.bootstrap.js') }}
 <script>
-	$('#list').dataTable();
+	$('.table').dataTable();
 </script>
 @stop

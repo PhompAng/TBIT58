@@ -16,10 +16,12 @@
 			</div>
 			<div class="row">
 				<div class="col-md-5 col-md-offset-3">
-					<div class="alert alert-info">
-						{{ Session::get('attendee')->prefix.Session::get('attendee')->name." ".Session::get('attendee')->surname." (".Session::get('attendee')->nickname.")" }}
-						<a href="#" class="pull-right">ยกเลิก</a>
-					</div>
+						@if (Session::has('attendee'))
+						<div class="alert alert-info">
+							{{ Session::get('attendee')->prefix.Session::get('attendee')->name." ".Session::get('attendee')->surname." (".Session::get('attendee')->nickname.")" }}
+							<a href="#" class="pull-right">ยกเลิก</a>
+						</div>
+						@endif
 					{{Form::open(array('url' => '/backend/checkin/update', 'method' => 'PUT'))}}
 						<div class="form-group">
 							{{Form::text('id', null, array('class' => 'form-control text-center', 'placeholder' => 'Attendee\'s ID'))}}

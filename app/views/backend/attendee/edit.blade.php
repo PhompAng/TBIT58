@@ -53,6 +53,12 @@
 		    </div>
 		  </div>
 		  <div class="form-group">
+		    <label class="col-sm-2 control-label">Expectation</label>
+		    <div class="col-sm-10">
+		      {{Form::textarea('expect', null, array('class' => 'form-control', 'rows' => '3'))}}
+		    </div>
+		  </div>
+		  <div class="form-group">
 		    <label class="col-sm-2 control-label"></label>
 		    <div class="col-sm-10">
 		      <div class="checkbox">

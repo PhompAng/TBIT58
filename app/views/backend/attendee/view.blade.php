@@ -35,7 +35,34 @@
 				</div>
 				<div class="col-sm-3">
 					<span class="field-name">ชั้น</span>
-					<div class="field-display">ม.{{$attendee->class}}</div>
+					<div class="field-display">
+						@if ($attendee->class == 7)
+							ปวช.
+						@elseif ($attendee->class == 8)
+							อื่นๆ
+						@elseif ($attendee->class == 0)
+							-
+						@else
+							ม.{{$attendee->class}}
+						@endif
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<span class="field-name">สมัครรับตรง</span>
+					<div class="field-display">
+						@if ($attendee->direct_ent)
+							<span class="text-success">True</span>
+						@else
+							<span class="text-muted">False</span>
+						@endif
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="well">{{$attendee->expect}}</div>
 				</div>
 			</div><br>
 			<div class="page-header">
@@ -52,12 +79,48 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td class="text-center"><i class="text-success glyphicon glyphicon-ok"></i></td>
-						<td class="text-center"><i class="text-success glyphicon glyphicon-ok"></i></td>
-						<td class="text-center"><i class="text-danger glyphicon glyphicon-remove"></i></td>
-						<td class="text-center"><i class="text-muted glyphicon glyphicon-ok"></i></td>
-						<td class="text-center"><i class="text-muted glyphicon glyphicon-remove"></i></td>
-						<td class="text-center"><i class="text-muted glyphicon glyphicon-ok"></i></td>
+						<td class="text-center">
+							@if ($attendee->day_1)
+								<i class="text-muted glyphicon glyphicon-ok"></i>
+							@else
+								<i class="text-muted glyphicon glyphicon-remove">
+							@endif
+						</td>
+						<td class="text-center">
+							@if ($attendee->day_2)
+								<i class="text-muted glyphicon glyphicon-ok"></i>
+							@else
+								<i class="text-muted glyphicon glyphicon-remove">
+							@endif
+						</td>
+						<td class="text-center">
+							@if ($attendee->day_3)
+								<i class="text-muted glyphicon glyphicon-ok"></i>
+							@else
+								<i class="text-muted glyphicon glyphicon-remove">
+							@endif
+						</td>
+						<td class="text-center">
+							@if ($attendee->day_4)
+								<i class="text-muted glyphicon glyphicon-ok"></i>
+							@else
+								<i class="text-muted glyphicon glyphicon-remove">
+							@endif
+						</td>
+						<td class="text-center">
+							@if ($attendee->day_5)
+								<i class="text-muted glyphicon glyphicon-ok"></i>
+							@else
+								<i class="text-muted glyphicon glyphicon-remove">
+							@endif
+						</td>
+						<td class="text-center">
+							@if ($attendee->day_6)
+								<i class="text-muted glyphicon glyphicon-ok"></i>
+							@else
+								<i class="text-muted glyphicon glyphicon-remove">
+							@endif
+						</td>
 					</tr>
 				</tbody>
 			</table><br>
@@ -67,7 +130,7 @@
 			<div class="table-responsive">
 				<table class="table table-bordered">
 					<tr>
-						<td><strong>Condition</strong></td>
+						<td><strong>Health Cond.</strong></td>
 						<td>{{$attendee->health_condition or "<span class='text-muted'><i>None</i></span>"}}</td>
 					</tr>
 					<tr>
@@ -98,11 +161,22 @@
 				</div>
 				<div class="col-xs-12">
 					<span class="field-name">การเดินทาง (มา)</span>
-					<div class="field-display">{{$attendee->trip}}</div>
+					<div class="field-display">
+						<?php $trip = array(0 => 'ไม่ระบุ',
+								   					 1 => 'รถยนต์ส่วนตัว',
+								   					 2 => 'ผู้ปกครองมาส่ง',
+								   					 3 => 'รถไฟ',
+								   					 4 => 'Airport Rail Link (ARL)',
+								   					 5 => 'รถตู้',
+								   					 6 => 'รถประจำทาง',
+								   					 7 => 'รถสองแถว',
+								   					 8 => 'อื่นๆ') ?>
+						{{$trip[$attendee->trip]}}
+					</div>
 				</div>
 				<div class="col-xs-12">
 					<span class="field-name">การเดินทาง (กลับ)</span>
-					<div class="field-display">{{$attendee->return_trip}} Train</div>
+					<div class="field-display">{{$trip[$attendee->return_trip]}}</div>
 				</div>
 				<div class="col-xs-12">
 					<a href="https://fb.com/{{$attendee->facebook_url}}" class="btn btn-sm btn-block btn-default"><i class="glyphicon glyphicon-link"></i> Facebook Profile</a>

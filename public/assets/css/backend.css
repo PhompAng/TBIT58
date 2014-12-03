@@ -195,3 +195,7 @@ body {
 .login {
   margin-top: 30px;
 }
+
+.well {
+  line-height: 1.8em;
+}

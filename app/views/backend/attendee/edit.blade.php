@@ -8,7 +8,7 @@
 	<div class="col-md-7">
 		<div class="box">
 			<div class="page-header">
-				<h2>Attendee Info</h2>
+				<h2>Attendee Info <small>(#{{str_pad($attendee->id, 6, 0, STR_PAD_LEFT)}})</small></h2>
 			</div>
 			<div class="form-group">
 		    <label class="col-sm-2 control-label">คำนำหน้า</label>
@@ -50,6 +50,14 @@
 		    <label class="col-sm-2 control-label">ระดับชั้น</label>
 		    <div class="col-sm-10">
 		      {{Form::select('class', array(NULL => 'ไม่ระบุ', 4 => 'ม.4', 5 => 'ม.5', 6 => 'ม.6', 7 => 'ปวช.', 8 => 'อื่นๆ'), null, array('class' => 'form-control'))}}
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="col-sm-2 control-label"></label>
+		    <div class="col-sm-10">
+		      <div class="checkbox">
+				    <label>{{Form::checkbox('direct_ent', 1, Input::old('direct_ent'))}} สมัครรับตรงไอทีลาดกระบังแล้ว</label>
+				  </div>
 		    </div>
 		  </div><br>
 			<div class="page-header">
@@ -101,7 +109,7 @@
 	<div class="col-md-5">
 		<div class="box">
 			<div class="page-header">
-				<h4>Contact Info <small>(#{{$attendee->id}})</small></h4>
+				<h4>Contact Info</h4>
 			</div>
 			<div class="form-group">
 		    <label class="col-sm-4 control-label">เบอร์โทร</label>

@@ -72,7 +72,8 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$attendee = Attendee::find($id)->fill(Input::all())->save();
+		return Redirect::to('/backend/attendee/'.$id);
 	}
 
 

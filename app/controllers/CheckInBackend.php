@@ -9,7 +9,8 @@ class CheckInBackend extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('backend.checkin.list');
+		$data = array('attendees' => Attendee::all(), );
+		return View::make('backend.checkin.list', $data);
 	}
 
 
@@ -67,7 +68,23 @@ class CheckInBackend extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$attending = Attendee::find(Input::get('id'))->attend;
+		$today = date('Y-m-d');
+		if ($today == '2015-01-11') {
+			$attending->day_1_check = !$attending->day_1_check;
+		} elseif ($today == '2015-01-11') {
+			$attending->day_2_check = !$attending->day_2_check;
+		} elseif ($today == '2015-01-24') {
+			$attending->day_3_check = !$attending->day_3_check;
+		} elseif ($today == '2015-01-25') {
+			$attending->day_4_check = !$attending->day_4_check;
+		} elseif ($today == '2015-01-31') {
+			$attending->day_5_check = !$attending->day_5_check;
+		} elseif ($today == '2015-02-01') {
+			$attending->day_6_check = !$attending->day_6_check;
+		}
+		$attending->save();
+		return Redirect::to('/backend/checkin/')->with('attendee', Attendee::find(Input::get('id')));
 	}
 
 

@@ -50,6 +50,9 @@ class Register extends \BaseController {
 		$validator = Validator::make(Input::all(), $validate_rules);
 		if (!$validator->fails()) {
 			$attendee_id = Attendee::create(Input::all())->id;
+			$attending = new Attending();
+			$attending->attendee_id = $attendee_id;
+			$attending->save();
 			$attendee_id = str_repeat("0", 6-strlen($attendee_id)).$attendee_id;
 			$data = array('title' 		=> "ลงทะเบียนสำเร็จ! - ToBeIT@KMITL '58",
 						  'attendee_id' => $attendee_id,

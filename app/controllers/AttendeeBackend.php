@@ -34,7 +34,11 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$attendee_id = Attendee::create(Input::all())->id;
+		$attending = new Attending();
+		$attending->attendee_id = $attendee_id;
+		$attending->save();
+		return Redirect::to('/backend/attendee/'.$attendee_id);
 	}
 
 

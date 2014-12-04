@@ -9,7 +9,9 @@ class MedicalBackend extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('backend.medical.list');
+		$data = array('attendees' => Attendee::where('food_allergy', '!=', '')->orWhere('med_allergy', '!=', '')->orWhere('health_condition', '!=', '')->get(),
+									'attendee_count' => Attendee::where('food_allergy', '!=', '')->orWhere('med_allergy', '!=', '')->orWhere('health_condition', '!=', '')->count());
+		return View::make('backend.medical.list', $data);
 	}
 
 
@@ -43,7 +45,7 @@ class MedicalBackend extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		return Redirect::to('/backend/medical')->with('information', Attendee::find($id));
 	}
 
 

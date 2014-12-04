@@ -85,7 +85,8 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		Attendee::destroy($id);
+		return Redirect::to('/backend/attendee/');
 	}
 
 

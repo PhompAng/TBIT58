@@ -101,9 +101,9 @@
 							</td>
 							<td>{{$attendee->created_at}}</td>
 							<td>
-								<a href="#" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-ok"></i> Present</a>
-								<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i> Absent</a>
-								<a href="#" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+								{{Form::open(array('route' => array('backend.checkin.update', $attendee->id), 'method' => 'PUT'))}}
+								<button type="submit" class="btn btn-xs btn-warning"><i class="glyphicon glyphicon-refresh"></i> Toggle</button>
+								{{Form::close()}}
 							</td>
 						</tr>
 						@endforeach

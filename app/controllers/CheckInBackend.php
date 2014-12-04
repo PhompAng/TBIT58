@@ -68,7 +68,10 @@ class CheckInBackend extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$attending = Attendee::find(Input::get('id'))->attend;
+		if (Input::has('id')) {
+			$id = Input::get('id');
+		}
+		$attending = Attendee::find($id)->attend;
 		$today = date('Y-m-d');
 		if ($today == '2015-01-11') {
 			$attending->day_1_check = !$attending->day_1_check;
@@ -84,7 +87,7 @@ class CheckInBackend extends \BaseController {
 			$attending->day_6_check = !$attending->day_6_check;
 		}
 		$attending->save();
-		return Redirect::to('/backend/checkin/')->with('attendee', Attendee::find(Input::get('id')));
+		return Redirect::to('/backend/checkin/')->with('attendee', Attendee::find($id));
 	}
 
 

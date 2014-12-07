@@ -9,7 +9,7 @@ class UserBackend extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return View::make('backend.profile.edit');
 	}
 
 
@@ -67,7 +67,23 @@ class UserBackend extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$validate_rules = array(
+			'password'       => 'confirmed',
+			'name'    => 'required|alpha',
+			'surname'	 =>	'required|alpha',
+		);
+		$validator = Validator::make(Input::all(), $validate_rules);
+		if (!$validator->fails()) {
+			$data = array(
+				'password' => Hash::make(Input::get('password')),
+				'name'		 => Input::get('name'),
+				'surname'	 => Input::get('surname')
+			);
+			Auth::user()->fill($data)->save();
+			return Redirect::to('/backend/profile/');
+		} else {
+			return Redirect::to('/backend/profile/')->withErrors($validator)->withInput();
+		}
 	}
 
 

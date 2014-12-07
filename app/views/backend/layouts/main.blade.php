@@ -13,7 +13,7 @@
     </ul>
     <ul class="sidebar-nav" id="sidebar-setting">     
       <li><a href="{{URL::to('/backend/report')}}">Report Generator<span class="sub_icon glyphicon glyphicon-print"></span></a></li>
-      <li><a href="{{URL::to('/backend/user')}}">User Management<span class="sub_icon glyphicon glyphicon-briefcase"></span></a></li>
+      <li><a href="{{URL::to('/backend/profile')}}">My Profile<span class="sub_icon glyphicon glyphicon-briefcase"></span></a></li>
       <li><a href="{{URL::to('/backend/logout')}}">Logout<span class="sub_icon glyphicon glyphicon-off"></span></a></li>
     </ul>
   </div>

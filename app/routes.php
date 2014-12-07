@@ -21,7 +21,7 @@ Route::group(array('before'=>'auth'), function(){
 	Route::resource('/backend/attendee', 'AttendeeBackend');
 	Route::resource('/backend/checkin', 'CheckInBackend');
 	Route::resource('/backend/medical', 'MedicalBackend');
-	Route::resource('/backend/user', 'UserBackend');
+	Route::resource('/backend/profile', 'UserBackend');
 });
 
 Route::get('/backend/login', 'BackendController@showLogin');

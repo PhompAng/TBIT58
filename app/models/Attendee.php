@@ -23,4 +23,9 @@ class Attendee extends Eloquent {
 		'day_2', 'day_3', 'day_4', 'day_5', 'day_6', 'direct_ent', 'prefix', 'gender'
 	);
 
+	public function attend()
+	{
+		return $this->hasOne('Attending');
+	}
+
 }

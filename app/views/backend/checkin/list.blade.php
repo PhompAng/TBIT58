@@ -15,23 +15,48 @@
 				<h1>Check-In System</h1>
 			</div>
 			<div class="row">
-				<div class="col-md-5 col-md-offset-3">
-						@if (Session::has('attendee'))
+				@if (Session::has('attendee'))
+					<div class="col-xs-12">
 						<div class="alert alert-info">
-							{{ Session::get('attendee')->prefix.Session::get('attendee')->name." ".Session::get('attendee')->surname." (".Session::get('attendee')->nickname.")" }}
+							{{ Session::get('attendee')->prefix.Session::get('attendee')->name." ".Session::get('attendee')->surname." (".Session::get('attendee')->nickname.") : ห้องเรียน ".Session::get('attendee')->room." | Status : ".Session::get('mode') }}
 							<a href="#" class="pull-right">ยกเลิก</a>
 						</div>
-						@endif
-					{{Form::open(array('url' => '/backend/checkin/update', 'method' => 'PUT'))}}
+					</div>
+				@endif
+				@if ($errors->any())
+					<div class="col-xs-12">
+						<div class="alert alert-danger">{{ $errors->first() }}</div>
+					</div>
+				@endif
+				{{Form::open(array('url' => '/backend/checkin/update', 'method' => 'PUT'))}}
+				<div class="col-md-7">
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<th class="text-center">223 (0/90 คน)</th>
+								<th class="text-center">328 (0/50 คน)</th>
+								<th class="text-center">329 (0/150 คน)</th>
+								<th class="text-center">335 (0/90 คน)</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-center">{{Form::radio('room', 223)}}</td>
+									<td class="text-center">{{Form::radio('room', 328)}}</td>
+									<td class="text-center">{{Form::radio('room', 329)}}</td>
+									<td class="text-center">{{Form::radio('room', 335)}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-md-5">
 						<div class="form-group">
 							{{Form::text('id', null, array('class' => 'form-control text-center', 'placeholder' => 'Attendee\'s ID'))}}
 						</div>
 						{{Form::submit('Check In', array('class' => 'btn btn-primary btn-block btn-sm'))}}
-					{{Form::close()}}
 				</div>
+				{{Form::close()}}
 			</div>
-		</div>
-
 		</div>
 	</div>
 	<div class="col-xs-12">
@@ -48,8 +73,8 @@
 						<th>D4</th>
 						<th>D5</th>
 						<th>D6</th>
+						<th>Room</th>
 						<th>Registered on</th>
-						<th>Actions</th>
 					</thead>
 					<tbody>
 						@foreach ($attendees as $attendee)
@@ -99,29 +124,20 @@
 									<i class="text-muted glyphicon glyphicon-remove">
 								@endif
 							</td>
-							<td>{{$attendee->created_at}}</td>
 							<td>
-								{{Form::open(array('route' => array('backend.checkin.update', $attendee->id), 'method' => 'PUT'))}}
-								<button type="submit" class="btn btn-xs btn-warning"><i class="glyphicon glyphicon-refresh"></i> Toggle</button>
-								{{Form::close()}}
+								{{ $attendee->room or "-" }}
 							</td>
+							<td>{{$attendee->created_at}}</td>
 						</tr>
 						@endforeach
 					</tbody>
 				</table>
 			</div>
+			<div class="text-center">
+				{{ $attendees->links() }}
+			</div>
 		</div>
 	</div>
 </div>
-
-@stop
-
-@section('js')
-
-{{ HTML::script('assets/js/jquery.dataTables.js') }}
-{{ HTML::script('assets/js/dataTables.bootstrap.js') }}
-<script>
-	$('.table').dataTable();
-</script>
 
 @stop

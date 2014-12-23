@@ -9,7 +9,7 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function index()
 	{
-		$data = array('attendees' 		=> Attendee::paginate(30));
+		$data = array('attendees' => Attendee::paginate(30));
 		return View::make('backend.attendee.list', $data);
 	}
 

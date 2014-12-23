@@ -131,15 +131,15 @@
 				<table class="table table-bordered">
 					<tr>
 						<td><strong>Health Cond.</strong></td>
-						<td>{{{$attendee->health_condition or "<span class='text-muted'><i>None</i></span>"}}}</td>
+						<td>@if (!empty($attendee->health_condition)) {{{$attendee->health_condition}}} @else <span class='text-muted'><i>None</i></span> @endif</td>
 					</tr>
 					<tr>
 						<td><strong>Food</strong></td>
-						<td>{{{$attendee->food_allergy or "<span class='text-muted'><i>None</i></span>"}}}</td>
+						<td>@if (!empty($attendee->food_allergy)) {{{$attendee->food_allergy}}} @else <span class='text-muted'><i>None</i></span> @endif</td>
 					</tr>
 					<tr>
 						<td><strong>Med.</strong></td>
-						<td>{{{$attendee->med_allergy or "<span class='text-muted'><i>None</i></span>"}}}</td>
+						<td>@if (!empty($attendee->med_allergy)) {{{$attendee->med_allergy}}} @else <span class='text-muted'><i>None</i></span> @endif</td>
 					</tr>
 				</table>
 			</div>

@@ -12,7 +12,10 @@
 	<div class="col-xs-12">
 		<div class="box">
 			<div class="page-header">
-				<h1>Attendees List <small>({{{$attendees_count}}} persons)</small></h1>
+				<h1>Attendees List <small>({{ $attendees->getTotal() }} persons)</small></h1>
+			</div>
+			<div class="actions-btn">
+				<a href="{{URL::to('/backend/attendee/create')}}" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-plus"></i> Add new attendee</a>
 			</div>
 			<div class="table-responsive">
 				<table class="table table-hover table-striped">
@@ -47,20 +50,11 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="actions-btn">
-				<a href="{{URL::to('/backend/attendee/create')}}" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-plus"></i> Add new attendee</a>
+			<div class="text-center">
+				{{ $attendees->links() }}
 			</div>
 		</div>
 	</div>
 </div>
 
-@stop
-
-@section('js')
-
-{{ HTML::script('assets/js/jquery.dataTables.js') }}
-{{ HTML::script('assets/js/dataTables.bootstrap.js') }}
-<script>
-	$('.table').dataTable();
-</script>
 @stop

@@ -32,7 +32,13 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function store()
 	{
-		$attendee_id = Attendee::create(Input::all())->id;
+		$data = Input::all();
+		foreach (Input::all() as $key => $value) {
+			if ($value == "") {
+				$data[$key] = NULL;
+			}
+		}
+		$attendee_id = Attendee::create($data)->id;
 		$attending = new Attending();
 		$attending->attendee_id = $attendee_id;
 		$attending->save();
@@ -74,8 +80,15 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$attendee = Attendee::find($id)->fill(Input::all())->save();
+		$data = Input::all();
+		foreach (Input::all() as $key => $value) {
+			if ($value == "") {
+				$data[$key] = NULL;
+			}
+		}
+		$attendee = Attendee::find($id)->fill($data)->save();
 		return Redirect::to('/backend/attendee/'.$id);
+
 	}
 
 

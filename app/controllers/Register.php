@@ -49,7 +49,13 @@ class Register extends \BaseController {
 		);
 		$validator = Validator::make(Input::all(), $validate_rules);
 		if (!$validator->fails()) {
-			$attendee_id = Attendee::create(Input::all())->id;
+			$data = Input::all();
+			foreach (Input::all() as $key => $value) {
+				if ($value == "") {
+					$data[$key] = NULL;
+				}
+			}
+			$attendee_id = Attendee::create($data)->id;
 			$attending = new Attending();
 			$attending->attendee_id = $attendee_id;
 			$attending->save();

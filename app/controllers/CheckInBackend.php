@@ -80,7 +80,7 @@ class CheckInBackend extends \BaseController {
 		$attending = $attendee->attend;
 		$today = date('Y-m-d');
 		$mode = 0;
-		if ($today == '2015-01-11') {
+		if ($today == '2015-01-10') {
 			$attending->day_1_check = !$attending->day_1_check;
 			$mode = $attending->day_1_check;
 		} elseif ($today == '2015-01-11') {

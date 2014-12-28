@@ -48,6 +48,8 @@
                 <table class="table table-hover table-striped">
                     <thead>
                         <th>ID</th>
+                        <th>Name</th>
+                        <th>Nickname</th>
                         <th>D1</th>
                         <th>D2</th>
                         <th>D3</th>
@@ -59,24 +61,28 @@
                     <tbody>
                         @foreach ($attendees as $attendee)
                         <tr>
-                            <td>{{str_pad($attendee->attendee_id, 6, 0, STR_PAD_LEFT)}}</td>
+                            <td>{{str_pad($attendee->id, 6, 0, STR_PAD_LEFT)}}</td>
                             <td>
-                                {{ $attendee->day_1_score or "-" }}
+                                <strong>{{$attendee->prefix.$attendee->name}} {{$attendee->surname}}</strong>
+                            </td>
+                            <td>{{$attendee->nickname}}</td>
+                            <td>
+                                {{ $attendee->quiz->day_1_score or "-" }}
                             </td>
                             <td>
-                                {{ $attendee->day_2_score or "-" }}
+                                {{ $attendee->quiz->day_2_score or "-" }}
                             </td>
                             <td>
-                                {{ $attendee->day_3_score or "-" }}
+                                {{ $attendee->quiz->day_3_score or "-" }}
                             </td>
                             <td>
-                                {{ $attendee->day_4_score or "-" }}
+                                {{ $attendee->quiz->day_4_score or "-" }}
                             </td>
                             <td>
-                                {{ $attendee->day_5_score or "-" }}
+                                {{ $attendee->quiz->day_5_score or "-" }}
                             </td>
                             <td>
-                                {{ $attendee->day_6_score or "-" }}
+                                {{ $attendee->quiz->day_6_score or "-" }}
                             </td>
                             <td>{{$attendee->updated_at}}</td>
                         </tr>

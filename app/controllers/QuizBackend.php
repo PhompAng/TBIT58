@@ -9,7 +9,7 @@ class QuizBackend extends \BaseController {
      */
     public function index()
     {
-        $data = array('attendees' => Quiz::paginate(30));
+        $data = array('attendees' => Attendee::paginate(30));
         return View::make('backend.quiz.list', $data);
     }
 

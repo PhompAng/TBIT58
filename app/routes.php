@@ -23,6 +23,7 @@ Route::group(array('before'=>'auth'), function(){
 	Route::resource('/backend/medical', 'MedicalBackend');
 	Route::resource('/backend/profile', 'UserBackend');
 	Route::resource('/backend/quiz', 'QuizBackend');
+	Route::controller('/backend/search', 'SearchController');
 });
 
 Route::get('/backend/login', 'BackendController@showLogin');

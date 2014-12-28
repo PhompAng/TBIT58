@@ -11,6 +11,7 @@
       <li><a href="{{URL::to('/backend/checkin')}}">Check In<span class="sub_icon glyphicon glyphicon-ok"></span></a></li>
       <li><a href="{{URL::to('/backend/medical')}}">Medical<span class="sub_icon glyphicon glyphicon-plus"></span></a></li>
       <li><a href="{{URL::to('/backend/quiz')}}">Quiz<span class="sub_icon glyphicon glyphicon-book"></span></a></li>
+      <li><a href="{{URL::to('/backend/search')}}">Search<span class="sub_icon glyphicon glyphicon-search"></span></a></li>
     </ul>
     <ul class="sidebar-nav" id="sidebar-setting">     
       <li><a href="{{URL::to('/backend/report')}}">Report Generator<span class="sub_icon glyphicon glyphicon-print"></span></a></li>

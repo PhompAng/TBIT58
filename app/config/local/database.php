@@ -25,7 +25,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'tbit58',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => '***REMOVED***',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

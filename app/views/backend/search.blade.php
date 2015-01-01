@@ -84,13 +84,12 @@ $("#searchForm").submit(function(event){
 	  	console.log(result);
 	  	$.each(result, function(k, v){
 	  		$('#result > tbody').append(
-	  			'<tr><td>' + v['id'] + '</td><td>' + v['name'] + ' ' + v['surname'] + '</td><td>' + v['nickname'] + '</td><td><a href="/backend/attendee/' + v['id'] + '">View Profile</a></td></tr>');
+	  			'<tr><td>' + v['id'] + '</td><td>' + v['name'] + ' ' + v['surname'] + '</td><td>' + v['nickname'] + '</td><td><a href="/2014/backend/attendee/' + v['id'] + '">View Profile</a></td></tr>');
 	  	});
 	  });
   } else {
   	alert("Please select where to search!");
   };
-  	
 });
 
 </script>

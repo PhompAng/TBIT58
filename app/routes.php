@@ -24,6 +24,7 @@ Route::group(array('before'=>'auth'), function(){
 	Route::resource('/backend/profile', 'UserBackend');
 	Route::resource('/backend/quiz', 'QuizBackend');
 	Route::controller('/backend/search', 'SearchController');
+	Route::controller('/backend/report', 'ReportController');
 });
 
 Route::get('/backend/login', 'BackendController@showLogin');

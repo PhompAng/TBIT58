@@ -59,11 +59,12 @@ class ReportController extends BaseController {
 	public function getMedicalClassList()
 	{
 		$data = [
-			'food_allergy' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'parent_tel', 'food_allergy'])->where('room', '=', Input::get('room', 1))->where('food_allergy', '!=', '')->get(),
-			'med_allergy' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'parent_tel', 'med_allergy'])->where('room', '=', Input::get('room', 1))->where('med_allergy', '!=', '')->get(),
-			'health_condition' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'parent_tel', 'health_condition'])->where('room', '=', Input::get('room', 1))->where('health_condition', '!=', '')->get(),
+			'food_allergy' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'food_allergy'])->where('room', '=', Input::get('room', 1))->where('food_allergy', '!=', '')->get(),
+			'med_allergy' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'med_allergy'])->where('room', '=', Input::get('room', 1))->where('med_allergy', '!=', '')->get(),
+			'health_condition' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'health_condition'])->where('room', '=', Input::get('room', 1))->where('health_condition', '!=', '')->get(),
+			'title' => "รายชื่อผู้เข้าร่วมโครงการที่มีความต้องการทางการแพทย์ (ห้อง ".Input::get('room', 223).")"
 		];
-		return $data;
+		return PDF::load(View::make('backend.report.room_medical', $data))->show();
 	}
 
 	public function getCheckinList()

@@ -33,10 +33,10 @@
 					<div class="table-responsive">
 						<table class="table table-bordered">
 							<thead>
-								<th class="text-center">223 (0/90 คน)</th>
-								<th class="text-center">328 (0/50 คน)</th>
-								<th class="text-center">329 (0/150 คน)</th>
-								<th class="text-center">335 (0/90 คน)</th>
+								<th class="text-center">223 ({{$room1cnt}}/90 คน)</th>
+								<th class="text-center">328 ({{$room2cnt}}/50 คน)</th>
+								<th class="text-center">329 ({{$room3cnt}}/150 คน)</th>
+								<th class="text-center">335 ({{$room4cnt}}/90 คน)</th>
 							</thead>
 							<tbody>
 								<tr>

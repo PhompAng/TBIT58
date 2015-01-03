@@ -9,8 +9,7 @@ class CheckInBackend extends \BaseController {
 	 */
 	public function index()
 	{
-		$data = array('attendees' => Attendee::paginate(30));
-		return View::make('backend.checkin.list', $data);
+		return View::make('backend.checkin.list')->with('attendees', Attendee::paginate(30))->with('room1cnt', Attendee::where('room', 223)->count())->with('room2cnt', Attendee::where('room', 328)->count())->with('room3cnt', Attendee::where('room', 329)->count())->with('room4cnt', Attendee::where('room', 335)->count());
 	}
 
 

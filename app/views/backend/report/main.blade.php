@@ -11,7 +11,14 @@
 				</div>
 				<div class="content">
 					<div class="alert alert-info">All attendee name and some basic informations</div>
-					<a href="{{ URL::to('/backend/report/attendee-list/') }}" class="btn btn-primary btn-block btn-sm">Generate</a>
+					{{ Form::open(['url' => '/backend/report/attendee-list/', 'method' => 'get'])}}
+							<div class="col-xs-6">
+								{{ Form::text('start', null, ['class' => 'form-control', 'placeholder' => 'Start ID']) }}	
+							</div>
+							<div class="col-xs-6">
+								{{ Form::submit('Generate', ['class' => 'btn btn-primary btn-sm btn-block'])}}
+							</div>
+					{{ Form::close() }}
 				</div>
 			</div>
 			<div class="box col-xs-12">

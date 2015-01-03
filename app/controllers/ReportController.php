@@ -44,8 +44,9 @@ class ReportController extends BaseController {
 
 	public function getAttendeeList()
 	{
-		$data = ['attendees' => Attendee::all()];
-		return $data;
+		$data = ['attendees' => Attendee::where('id', '>=', Input::get('start', 1))->take(80)->get(),
+						 'title'		 => "รายชื่อผู้เข้าร่วมโครงการ (เริ่มต้นที่ ID 0".Input::get('start', 1)." ถึง 80 คนถัดไป)"];
+    return PDF::load(View::make('backend.report.all_attendee', $data))->show();
 	}
 
 	public function getClassList()

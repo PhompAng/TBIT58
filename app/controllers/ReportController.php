@@ -51,23 +51,24 @@ class ReportController extends BaseController {
 
 	public function getClassList()
 	{
-		$data = ['attendees' => Attendee::select(['id', 'name', 'surname', 'nickname', 'tel'])->where('room', '=', Input::get('room', 1))->get()];
-		return $data;
+		$data = ['attendees' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'tel'])->where('room', '=', Input::get('room', 1))->get(),
+						 'title'		 => "รายชื่อผู้เข้าร่วมโครงการ (ห้อง ".Input::get('room', 223).")"];
+		return PDF::load(View::make('backend.report.class_list', $data))->show();
 	}
 
 	public function getMedicalClassList()
 	{
 		$data = [
-			'food_allergy' => Attendee::select(['id', 'name', 'surname', 'nickname', 'parent_tel', 'food_allergy'])->where('room', '=', Input::get('room', 1))->where('food_allergy', '!=', '')->get(),
-			'med_allergy' => Attendee::select(['id', 'name', 'surname', 'nickname', 'parent_tel', 'med_allergy'])->where('room', '=', Input::get('room', 1))->where('med_allergy', '!=', '')->get(),
-			'health_condition' => Attendee::select(['id', 'name', 'surname', 'nickname', 'parent_tel', 'health_condition'])->where('room', '=', Input::get('room', 1))->where('health_condition', '!=', '')->get(),
+			'food_allergy' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'parent_tel', 'food_allergy'])->where('room', '=', Input::get('room', 1))->where('food_allergy', '!=', '')->get(),
+			'med_allergy' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'parent_tel', 'med_allergy'])->where('room', '=', Input::get('room', 1))->where('med_allergy', '!=', '')->get(),
+			'health_condition' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'parent_tel', 'health_condition'])->where('room', '=', Input::get('room', 1))->where('health_condition', '!=', '')->get(),
 		];
 		return $data;
 	}
 
 	public function getCheckinList()
 	{
-		$data = ['attendees' => Attendee::select(['id', 'name', 'surname', 'nickname'])->whereHas('attend', function($query){
+		$data = ['attendees' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname'])->whereHas('attend', function($query){
 					$query->where('day_'.Input::get('day', 1).'_check', '=', True);
 				})->get()];
 		return $data;

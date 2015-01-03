@@ -69,10 +69,11 @@ class ReportController extends BaseController {
 
 	public function getCheckinList()
 	{
-		$data = ['attendees' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname'])->whereHas('attend', function($query){
-					$query->where('day_'.Input::get('day', 1).'_check', '=', True);
-				})->get()];
-		return $data;
+		$data = ['attendees' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'tel', 'created_at'])->whereHas('attend', function($query){
+								$query->where('day_'.Input::get('day', 1).'_check', '=', True);
+							})->get(),
+						 'title' => "รายชื่อผู้มาเข้าร่วมโครงการ (วันที่ ".Input::get('day', 1).")"];
+		return PDF::load(View::make('backend.report.checked_in', $data))->show();
 	}
 
 }

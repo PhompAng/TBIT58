@@ -40,6 +40,7 @@ class CreateAttendeesTable extends Migration {
 			$table->boolean('day_5')->default(False);
 			$table->boolean('day_6')->default(False);
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

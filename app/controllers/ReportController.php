@@ -46,14 +46,16 @@ class ReportController extends BaseController {
 	{
 		$data = ['attendees' => Attendee::where('id', '>=', Input::get('start', 1))->take(80)->get(),
 						 'title'		 => "รายชื่อผู้เข้าร่วมโครงการ (เริ่มต้นที่ ID 0".Input::get('start', 1)." ถึง 80 คนถัดไป)"];
-    return PDF::load(View::make('backend.report.all_attendee', $data))->show();
+    //return PDF::load(View::make('backend.report.all_attendee', $data))->show();
+    return View::make('backend.report.all_attendee', $data);
 	}
 
 	public function getClassList()
 	{
 		$data = ['attendees' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'tel'])->where('room', '=', Input::get('room', 1))->get(),
 						 'title'		 => "รายชื่อผู้เข้าร่วมโครงการ (ห้อง ".Input::get('room', 223).")"];
-		return PDF::load(View::make('backend.report.class_list', $data))->show();
+		//return PDF::load(View::make('backend.report.class_list', $data))->show();
+		return View::make('backend.report.class_list', $data);
 	}
 
 	public function getMedicalClassList()
@@ -64,7 +66,8 @@ class ReportController extends BaseController {
 			'health_condition' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'health_condition'])->where('room', '=', Input::get('room', 1))->where('health_condition', '!=', '')->get(),
 			'title' => "รายชื่อผู้เข้าร่วมโครงการที่มีความต้องการทางการแพทย์ (ห้อง ".Input::get('room', 223).")"
 		];
-		return PDF::load(View::make('backend.report.room_medical', $data))->show();
+		//return PDF::load(View::make('backend.report.room_medical', $data))->show();
+		return View::make('backend.report.room_medical', $data);
 	}
 
 	public function getCheckinList()
@@ -73,7 +76,8 @@ class ReportController extends BaseController {
 								$query->where('day_'.Input::get('day', 1).'_check', '=', True);
 							})->get(),
 						 'title' => "รายชื่อผู้มาเข้าร่วมโครงการ (วันที่ ".Input::get('day', 1).")"];
-		return PDF::load(View::make('backend.report.checked_in', $data))->show();
+		//return PDF::load(View::make('backend.report.checked_in', $data))->show();
+		return View::make('backend.report.checked_in', $data);
 	}
 
 }

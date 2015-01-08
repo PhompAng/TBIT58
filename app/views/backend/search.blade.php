@@ -22,7 +22,7 @@
 			      	{{Form::radio('in', 'id', Input::old('in'))}} ID
 						</label>
 						<label class="radio-inline">
-						  {{Form::radio('in', 'name', Input::old('in') )}} Name
+						  {{Form::radio('in', 'name', Input::old('in'), ['checked'] )}} Name
 						</label>
 						<label class="radio-inline">
 						  {{Form::radio('in', 'nickname', Input::old('in') )}} Nickname
@@ -83,8 +83,13 @@ $("#searchForm").submit(function(event){
 	  	$("#result > tbody").html("");
 	  	console.log(result);
 	  	$.each(result, function(k, v){
-	  		$('#result > tbody').append(
-	  			'<tr><td>' + v['id'] + '</td><td>' + v['name'] + ' ' + v['surname'] + '</td><td>' + v['nickname'] + '</td><td><a href="/2014/backend/attendee/' + v['id'] + '">View Profile</a></td></tr>');
+	  		if (v['deleted_at'] == null) {
+	  			$('#result > tbody').append(
+	  			'<tr><td>' + v['id'] + '</td><td>' + v['name'] + ' ' + v['surname'] + '</td><td>' + v['nickname'] + '</td><td><a href="{{URL::to("/backend/attendee")}}/' + v['id'] + '">View Profile</a></td></tr>');
+	  		} else {
+	  			$('#result > tbody').append(
+	  			'<tr><td>' + v['id'] + '</td><td>' + v['name'] + ' ' + v['surname'] + '</td><td>' + v['nickname'] + '</td><td><span class="text-danger">DELETED</span></td></tr>');
+	  		};
 	  	});
 	  });
   } else {

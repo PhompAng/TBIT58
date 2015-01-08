@@ -83,45 +83,69 @@
 							<td><strong>{{$attendee->prefix.$attendee->name}} {{$attendee->surname}}</strong></td>
 							<td>{{$attendee->nickname}}</td>
 							<td>
-								@if ($attendee->day_1)
-									<i class="text-muted glyphicon glyphicon-ok"></i>
+								@if ($attendee->attend->day_1_check)
+									<i class="text-success glyphicon glyphicon-ok"></i>
 								@else
-									<i class="text-muted glyphicon glyphicon-remove">
+									@if ($attendee->day_1)
+										<i class="text-muted glyphicon glyphicon-ok"></i>
+									@else
+										<i class="text-muted glyphicon glyphicon-remove">
+									@endif
 								@endif
 							</td>
 							<td>
-								@if ($attendee->day_2)
-									<i class="text-muted glyphicon glyphicon-ok"></i>
+								@if ($attendee->attend->day_2_check)
+									<i class="text-success glyphicon glyphicon-ok"></i>
 								@else
-									<i class="text-muted glyphicon glyphicon-remove">
+									@if ($attendee->day_2)
+										<i class="text-muted glyphicon glyphicon-ok"></i>
+									@else
+										<i class="text-muted glyphicon glyphicon-remove">
+									@endif
 								@endif
 							</td>
 							<td>
-								@if ($attendee->day_3)
-									<i class="text-muted glyphicon glyphicon-ok"></i>
+								@if ($attendee->attend->day_3_check)
+									<i class="text-success glyphicon glyphicon-ok"></i>
 								@else
-									<i class="text-muted glyphicon glyphicon-remove">
+									@if ($attendee->day_3)
+										<i class="text-muted glyphicon glyphicon-ok"></i>
+									@else
+										<i class="text-muted glyphicon glyphicon-remove">
+									@endif
 								@endif
 							</td>
 							<td>
-								@if ($attendee->day_4)
-									<i class="text-muted glyphicon glyphicon-ok"></i>
+								@if ($attendee->attend->day_4_check)
+									<i class="text-success glyphicon glyphicon-ok"></i>
 								@else
-									<i class="text-muted glyphicon glyphicon-remove">
+									@if ($attendee->day_4)
+										<i class="text-muted glyphicon glyphicon-ok"></i>
+									@else
+										<i class="text-muted glyphicon glyphicon-remove">
+									@endif
 								@endif
 							</td>
 							<td>
-								@if ($attendee->day_5)
-									<i class="text-muted glyphicon glyphicon-ok"></i>
+								@if ($attendee->attend->day_5_check)
+									<i class="text-success glyphicon glyphicon-ok"></i>
 								@else
-									<i class="text-muted glyphicon glyphicon-remove">
+									@if ($attendee->day_5)
+										<i class="text-muted glyphicon glyphicon-ok"></i>
+									@else
+										<i class="text-muted glyphicon glyphicon-remove">
+									@endif
 								@endif
 							</td>
 							<td>
-								@if ($attendee->day_6)
-									<i class="text-muted glyphicon glyphicon-ok"></i>
+								@if ($attendee->attend->day_6_check)
+									<i class="text-success glyphicon glyphicon-ok"></i>
 								@else
-									<i class="text-muted glyphicon glyphicon-remove">
+									@if ($attendee->day_6)
+										<i class="text-muted glyphicon glyphicon-ok"></i>
+									@else
+										<i class="text-muted glyphicon glyphicon-remove">
+									@endif
 								@endif
 							</td>
 							<td>

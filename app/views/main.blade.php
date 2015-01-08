@@ -177,37 +177,37 @@
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/hw.gif')}}">
 							<h4 class="subject-title">Hardware</h4>
-							<a href="#" onclick="alert('จะเปิดให้ดาวน์โหลดเอกสารเร็วๆ นี้ครับ :3');" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
+							<a href="#" onclick="alert('จะเปิดให้ดาวน์โหลดเอกสารเร็วๆ นี้ครับ :3');" class="btn btn-default btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/sw.gif')}}">
 							<h4 class="subject-title">Software</h4>
-							<a href="#" onclick="alert('จะเปิดให้ดาวน์โหลดเอกสารเร็วๆ นี้ครับ :3');" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
+							<a href="{{ URL::to('/sheets/software.pdf') }}" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/logic.gif')}}">
 							<h4 class="subject-title">Logic & Ethics</h4>
-							<a href="#" onclick="alert('จะเปิดให้ดาวน์โหลดเอกสารเร็วๆ นี้ครับ :3');" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
+							<a href="{{ URL::to('/sheets/LogicBaseEthic.pdf') }}" class="btn btn-default btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/db.gif')}}">
 							<h4 class="subject-title">Database</h4>
-							<a href="#" onclick="alert('จะเปิดให้ดาวน์โหลดเอกสารเร็วๆ นี้ครับ :3');" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
+							<a href="#" class="btn btn-default disabled btn-sm"><span class="glyphicon glyphicon-download-alt"></span> รออีกแปบนึงนะ :3</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/media.gif')}}">
 							<h4 class="subject-title">Website & Multimedia</h4>
-							<a href="#" onclick="alert('จะเปิดให้ดาวน์โหลดเอกสารเร็วๆ นี้ครับ :3');" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
+							<a href="#" class="btn btn-default disabled btn-sm"><span class="glyphicon glyphicon-download-alt"></span> รออีกแปบนึงนะ :3</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/network.gif')}}">
 							<h4 class="subject-title">Network</h4>
-							<a href="#" onclick="alert('จะเปิดให้ดาวน์โหลดเอกสารเร็วๆ นี้ครับ :3');" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
+							<a href="#" class="btn btn-default disabled btn-sm"><span class="glyphicon glyphicon-download-alt"></span> รออีกแปบนึงนะ :3</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/programming.gif')}}">
 							<h4 class="subject-title">Programming & Math</h4>
-							<a href="#" onclick="alert('จะเปิดให้ดาวน์โหลดเอกสารเร็วๆ นี้ครับ :3');" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
+							<a href="#" class="btn btn-default disabled btn-sm"><span class="glyphicon glyphicon-download-alt"></span> รออีกแปบนึงนะ :3</a>
 						</div>
 				</div>
 			</div>

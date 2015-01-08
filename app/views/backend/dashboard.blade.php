@@ -82,11 +82,11 @@
 							<tr>
 								<td class="text-right">มา</td>
 								<td class="text-center">{{ $attending_real[0] }}</td>
-								<td class="text-center">{{ $attending_real[0] }}</td>
-								<td class="text-center">{{ $attending_real[0] }}</td>
-								<td class="text-center">{{ $attending_real[0] }}</td>
-								<td class="text-center">{{ $attending_real[0] }}</td>
-								<td class="text-center">{{ $attending_real[0] }}</td>
+								<td class="text-center">{{ $attending_real[1] }}</td>
+								<td class="text-center">{{ $attending_real[2] }}</td>
+								<td class="text-center">{{ $attending_real[3] }}</td>
+								<td class="text-center">{{ $attending_real[4] }}</td>
+								<td class="text-center">{{ $attending_real[5] }}</td>
 							</tr>
 						</tbody>
 					</table>

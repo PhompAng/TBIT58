@@ -53,6 +53,7 @@
 						<th>ID</th>
 						<th>Name</th>
 						<th>Nickname</th>
+						<th>Room</th>
 						<th>View</th>
 					</thead>
 					<tbody>
@@ -85,10 +86,10 @@ $("#searchForm").submit(function(event){
 	  	$.each(result, function(k, v){
 	  		if (v['deleted_at'] == null) {
 	  			$('#result > tbody').append(
-	  			'<tr><td>' + v['id'] + '</td><td>' + v['name'] + ' ' + v['surname'] + '</td><td>' + v['nickname'] + '</td><td><a href="{{URL::to("/backend/attendee")}}/' + v['id'] + '">View Profile</a></td></tr>');
+	  			'<tr><td>' + v['id'] + '</td><td>' + v['name'] + ' ' + v['surname'] + '</td><td>' + v['nickname'] + '</td><td>' + v['room'] + '</td><td><a href="{{URL::to("/backend/attendee")}}/' + v['id'] + '">View Profile</a></td></tr>');
 	  		} else {
 	  			$('#result > tbody').append(
-	  			'<tr><td>' + v['id'] + '</td><td>' + v['name'] + ' ' + v['surname'] + '</td><td>' + v['nickname'] + '</td><td><span class="text-danger">DELETED</span></td></tr>');
+	  			'<tr><td>' + v['id'] + '</td><td>' + v['name'] + ' ' + v['surname'] + '</td><td>' + v['nickname'] + '</td><td>' + v['room'] + '</td><td><span class="text-danger">DELETED</span></td></tr>');
 	  		};
 	  	});
 	  });

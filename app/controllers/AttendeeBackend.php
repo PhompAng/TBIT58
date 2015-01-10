@@ -42,6 +42,9 @@ class AttendeeBackend extends \BaseController {
 		$attending = new Attending();
 		$attending->attendee_id = $attendee_id;
 		$attending->save();
+		$quiz = new Quiz();
+		$quiz->attendee_id = $attendee_id;
+		$quiz->save();
 		return Redirect::to('/backend/attendee/'.$attendee_id);
 	}
 

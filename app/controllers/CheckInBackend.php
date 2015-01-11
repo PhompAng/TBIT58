@@ -84,19 +84,19 @@ class CheckInBackend extends \BaseController {
 			$mode = $attending->day_1_check;
 		} elseif ($today == '2015-01-11') {
 			$attending->day_2_check = !$attending->day_2_check;
-			$mode = $attending->day_1_check;
+			$mode = $attending->day_2_check;
 		} elseif ($today == '2015-01-24') {
 			$attending->day_3_check = !$attending->day_3_check;
-			$mode = $attending->day_1_check;
+			$mode = $attending->day_3_check;
 		} elseif ($today == '2015-01-25') {
 			$attending->day_4_check = !$attending->day_4_check;
-			$mode = $attending->day_1_check;
+			$mode = $attending->day_4_check;
 		} elseif ($today == '2015-01-31') {
 			$attending->day_5_check = !$attending->day_5_check;
-			$mode = $attending->day_1_check;
+			$mode = $attending->day_5_check;
 		} elseif ($today == '2015-02-01') {
 			$attending->day_6_check = !$attending->day_6_check;
-			$mode = $attending->day_1_check;
+			$mode = $attending->day_6_check;
 		}
 		$attending->save();
 		$attendee->fill(Input::all())->save();

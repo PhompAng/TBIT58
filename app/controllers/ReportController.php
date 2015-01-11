@@ -80,4 +80,14 @@ class ReportController extends BaseController {
 		return View::make('backend.report.checked_in', $data);
 	}
 
+	public function getCheckLeaveList()
+	{
+		$data = ['attendees' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname'])->whereHas('attend', function($query){
+								$query->where('day_'.Input::get('day', 1).'_check', '=', True);
+							})->get(),
+						 'title' => "รายชื่อผู้เข้าร่วมโครงการออกก่อนเวลา (วันที่ ".Input::get('day', 1).")"];
+		//return PDF::load(View::make('backend.report.checked_in', $data))->show();
+		return View::make('backend.report.checked_leave', $data);
+	}
+
 }

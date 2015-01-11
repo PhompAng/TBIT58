@@ -97,3 +97,8 @@ h3 {
 .text-center {
   text-align: center;
 }
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > td {
+  border: 1px solid #eeeeee;
+}

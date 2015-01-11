@@ -71,6 +71,22 @@
 			</div>
 		</div>
 	</div>
+	<div class="col-md-4">
+		<div class="box">
+			<div class="page-header">
+				<h4>Early check-out report</h4>
+			</div>
+			<div class="content">
+				<div class="alert alert-info">A list of attendee early checked-out in the selected day</div>
+				{{ Form::open(['url' => '/backend/report/check-leave-list/', 'method' => 'get'])}}
+						<div class="form-group">
+							{{ Form::select('day', [1 => "10 มกราคม 2558", 2 => "11 มกราคม 2558", 3 => "24 มกราคม 2558", 4 => "25 มกราคม 2558", 5 => "31 มกราคม 2558", 6 => "1 กุมภาพันธ์ 2558"], 1, ['class' => 'form-control']) }}
+						</div>
+						{{ Form::submit('Generate', ['class' => 'btn btn-primary btn-sm btn-block'])}}
+					{{ Form::close() }}
+			</div>
+		</div>
+	</div>
 </div>
 
 @stop

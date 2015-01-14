@@ -35,7 +35,7 @@ class ReportController extends BaseController {
 				case 'school':
 					$result = Attendee::where('school', 'like', "%".$keyword."%")->get();
 					break;
-			}	
+			}
 		} else {
 			$result = array();
 		}
@@ -45,15 +45,15 @@ class ReportController extends BaseController {
 	public function getAttendeeList()
 	{
 		$data = ['attendees' => Attendee::where('id', '>=', Input::get('start', 1))->take(80)->get(),
-						 'title'		 => "รายชื่อผู้เข้าร่วมโครงการ (เริ่มต้นที่ ID 0".Input::get('start', 1)." ถึง 80 คนถัดไป)"];
-    //return PDF::load(View::make('backend.report.all_attendee', $data))->show();
-    return View::make('backend.report.all_attendee', $data);
+						 'title'         => "รายชื่อผู้เข้าร่วมโครงการ (เริ่มต้นที่ ID 0".Input::get('start', 1)." ถึง 80 คนถัดไป)"];
+	//return PDF::load(View::make('backend.report.all_attendee', $data))->show();
+	return View::make('backend.report.all_attendee', $data);
 	}
 
 	public function getClassList()
 	{
 		$data = ['attendees' => Attendee::select(['id', 'prefix', 'name', 'surname', 'nickname', 'tel'])->where('room', '=', Input::get('room', 1))->get(),
-						 'title'		 => "รายชื่อผู้เข้าร่วมโครงการ (ห้อง ".Input::get('room', 223).")"];
+						 'title'         => "รายชื่อผู้เข้าร่วมโครงการ (ห้อง ".Input::get('room', 223).")"];
 		//return PDF::load(View::make('backend.report.class_list', $data))->show();
 		return View::make('backend.report.class_list', $data);
 	}
@@ -90,4 +90,28 @@ class ReportController extends BaseController {
 		return View::make('backend.report.checked_leave', $data);
 	}
 
+	public function getQuizScore()
+	{
+		$day = Input::get('day', 1);
+		$mean = Quiz::avg('day_'.$day.'_score');
+		$min = Quiz::min('day_'.$day.'_score');
+		$max = Quiz::max('day_'.$day.'_score');
+		$sum = 0;
+		foreach (Quiz::where('day_'.$day.'_score', '!=', '')->get()->toArray() as $score) {
+			$sum += pow($score['day_'.$day.'_score'] - $mean, 2);
+		}
+		$sd = sqrt($sum/Quiz::where('day_'.$day.'_score', '!=', '')->count());
+		$data = ['attendees' => Attendee::join('quiz', 'attendees.id', '=', 'quiz.attendee_id')->where('day_'.$day.'_score', '!=', '')->orderBy('quiz.'.'day_'.$day.'_score', 'DESC')->get(),
+				'title' => "คะแนน Quiz วันที่ ".$day,
+				'day' => $day,
+				'mean' => $mean,
+				'min' => $min,
+				'max' => $max,
+				'sd' => $sd];
+		return View::make('backend.report.quiz', $data);
+	}
+
 }
+
+
+;

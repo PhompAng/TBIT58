@@ -26,7 +26,7 @@ class Attendee extends Eloquent {
         'name', 'surname', 'nickname', 'email',
         'tel', 'parent_tel', 'class', 'school', 'facebook_url', 'trip', 'return_trip',
         'food_allergy', 'med_allergy', 'health_condition', 'expect','day_1',
-        'day_2', 'day_3', 'day_4', 'day_5', 'day_6', 'direct_ent', 'prefix', 'gender', 'room'
+        'day_2', 'day_3', 'day_4', 'day_5', 'day_6', 'direct_ent', 'prefix', 'gender', 'room', 'food'
     );
 
     public function attend()

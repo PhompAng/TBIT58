@@ -33,17 +33,19 @@
 					<div class="table-responsive">
 						<table class="table table-bordered">
 							<thead>
-								<th class="text-center">223 ({{$room1cnt}}/90 คน)</th>
-								<th class="text-center">328 ({{$room2cnt}}/50 คน)</th>
-								<th class="text-center">329 ({{$room3cnt}}/150 คน)</th>
-								<th class="text-center">335 ({{$room4cnt}}/90 คน)</th>
+								<th class="text-center">ห้อง</th>
+								<th class="text-center">223</th>
+								<th class="text-center">328</th>
+								<th class="text-center">329</th>
+								<th class="text-center">335</th>
 							</thead>
 							<tbody>
 								<tr>
-									<td class="text-center">{{Form::radio('room', 223)}}</td>
-									<td class="text-center">{{Form::radio('room', 328)}}</td>
-									<td class="text-center">{{Form::radio('room', 329)}}</td>
-									<td class="text-center">{{Form::radio('room', 335)}}</td>
+									<td class="text-center"><strong>จำนวน</strong></td>
+									<td class="text-center">{{$room1cnt}}/90 คน</td>
+									<td class="text-center">{{$room3cnt}}/150 คน</td>
+									<td class="text-center">{{$room3cnt}}/150 คน</td>
+									<td class="text-center">{{$room4cnt}}/90 คน</td>
 								</tr>
 							</tbody>
 						</table>
@@ -51,11 +53,12 @@
 				</div>
 				<div class="col-md-5">
 						<div class="form-group">
-							{{Form::text('id', null, array('class' => 'form-control text-center', 'placeholder' => 'Attendee\'s ID'))}}
+							<input type="text" name="attnID" class="form-control text-center" placeholder="Attendee's ID">
 						</div>
-						{{Form::submit('Check In', array('class' => 'btn btn-primary btn-block btn-sm'))}}
+						<button type="button" id="attnSearch" class="btn btn-primary btn-block btn-sm">Check in</button>
+						
 				</div>
-				{{Form::close()}}
+				
 			</div>
 		</div>
 	</div>
@@ -74,6 +77,7 @@
 						<th>D5</th>
 						<th>D6</th>
 						<th>Room</th>
+						<th>Food</th>
 						<th>Registered on</th>
 					</thead>
 					<tbody>
@@ -151,6 +155,7 @@
 							<td>
 								{{ $attendee->room or "-" }}
 							</td>
+							<td>{{ $attendee->food }}</td>
 							<td>{{$attendee->created_at}}</td>
 						</tr>
 						@endforeach
@@ -162,6 +167,133 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal fade" id="checkinModel" tabindex="-1" role="dialog" aria-labelledby="checkinLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="checkinLabel">Checking in</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="row">
+	      		<div class="col-sm-6">
+	      			<div class="form-horizontal">
+								<div class="form-group">
+							  	<label for="name" class="col-sm-2 control-label">Name</label>
+							  	<div class="col-sm-10">
+							  		<input type="text" name="name" class="form-control" disabled value="นายต้นสาย สิงห์กังวาน (ต้น)">
+							  	</div>
+				        </div>
+				        <div class="form-group">
+							    <label for="room" class="col-sm-2 control-label">Room</label>
+							    <div class="col-sm-10">
+							      <select name="room" id="room" class="form-control">
+							      	<option value="0">N/A</option>
+							      	<option value="223">223 ({{$room1cnt}}/90 คน)</option>
+											<option value="328">328 ({{$room3cnt}}/150 คน)</option>
+											<option value="329">329 ({{$room3cnt}}/150 คน)</option>
+											<option value="335">335 ({{$room4cnt}}/90 คน)</option>
+							      </select>
+							    </div>
+							  </div>
+							  <div class="form-group">
+							  	<label for="status" class="col-sm-2 control-label">Status</label>
+							  	<div class="col-sm-10">
+							  		<label class="radio-inline">
+										  <input type="radio" name="status" value="1" checked> มา
+										</label>
+										<label class="radio-inline">
+										  <input type="radio" name="status" value="0"> ไม่มา
+										</label>
+							  	</div>
+				        </div>
+	      			</div>
+	      		</div>
+	      		<div class="col-sm-6">
+	      			<div class="form-horizontal">
+	      				<div class="form-group">
+							  	<label for="name" class="col-sm-4 control-label">Nickname</label>
+							  	<div class="col-sm-8">
+							  		<input type="text" name="nickname" class="form-control" disabled>
+							  	</div>
+				        </div>
+	      				<div class="form-group">
+							  	<label for="food" class="col-sm-2 control-label">Food</label>
+							  	<div class="col-sm-10">
+							  		<select name="food" id="food" class="form-control">
+							  			<option value="0">N/A</option>
+							      	<option value="1">กะเพราหมู</option>
+											<option value="2">กะเพรากุ้ง</option>
+											<option value="3">ข้าวผัดหมู</option>
+											<option value="4">หมูกระเทียม</option>
+							      </select>
+							  	</div>
+							  </div>
+	      			</div>
+	      		</div>
+	      	</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" id="checkinModalSave" class="btn btn-primary">Save</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 </div>
+
+@stop
+
+@section('js')
+
+<script>
+	var modal = $('#checkinModel');
+	var room = $('select[name=room]');
+	var food = $('select[name=food]');
+	var data;
+
+	$('#attnSearch').click(function(){
+		var attendee = $.post('{{URL::to("/backend/search/get-attendee")}}', {attnID: $('input[name=attnID]').val()});
+		attendee.done(function(result){
+			console.log(result);
+			data = result;
+			if (result['name'] != null) {
+				$('input[name=name]').val(result['prefix'] + result['name'] + " " + result['surname']);
+				$('input[name=nickname]').val(result['nickname']);
+				room.val(data['room']);
+				//food.val(data['food']);
+				modal.modal('toggle');
+			} else {
+				alert("ไม่พบเลขที่ใบลงทะเบียนนี้ในระบบ!");
+			};
+		});
+	});
+
+	$('input[name=status][value=0]').click(function(){
+		room.val(0).prop('disabled', true);
+		food.val(0).prop('disabled', true);
+	});
+
+	$('input[name=status][value=1]').click(function(){
+		room.prop('disabled', false);
+		food.prop('disabled', false);
+		room.val(data['room']);
+		//food.val(data['food']);
+	});
+
+	$('#checkinModalSave').click(function(){
+		//alert($('select[name=room]').val());
+		id = $('input[name=attnID]').val();
+		mode = $('input[name=status]:checked').val();
+		attendee = $.post('{{URL::to("/backend/checkin/update")}}', {id: id, mode: mode, room: room.val(), food: food.val(), _method: "PUT"});
+		attendee.success(function(){
+			alert('บันทึกข้อมูลสำเร็จ :D');
+		});
+		//attendee.fail(function(){
+		//	alert('บันทึกข้อมูลไม่เสร็จ :(');
+		//});
+		modal.modal('toggle');
+	});
+</script>
 
 @stop

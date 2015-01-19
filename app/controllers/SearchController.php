@@ -42,5 +42,11 @@ class SearchController extends BaseController {
 		return Response::json($result);
 	}
 
+	public function postGetAttendee()
+	{
+		$result = Attendee::find(Input::get('attnID'));
+		return Response::json($result);
+	}
+
 
 }

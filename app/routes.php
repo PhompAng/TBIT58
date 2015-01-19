@@ -16,6 +16,7 @@ Route::get('/', function()
 	return View::make('main');
 });
 
+
 Route::group(array('before'=>'auth'), function(){
 	Route::get('/backend', 'BackendController@showDashboard');
 	Route::resource('/backend/attendee', 'AttendeeBackend');
@@ -42,3 +43,6 @@ Route::get('register/success', function()
 });
 
 Route::resource('register', 'Register');
+
+
+Route::resource('quiz', 'QuizController');

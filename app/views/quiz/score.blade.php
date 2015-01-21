@@ -5,7 +5,7 @@
         <div class="col-sm-10 col-sm-offset-1">
             <div class="box login">
                 <div class="page-hader">
-                    <h2>Yeah!</h2>
+                    <h2>Your Score</h2>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover">

@@ -103,6 +103,19 @@
 			</div>
 		</div>
 	</div>
+	<div class="col-md-4">
+		<div class="box">
+			<div class="page-header">
+				<h4>Quiz Score Report</h4>
+			</div>
+			<div class="content">
+				<div class="alert alert-info">A lsit of attendees quiz score sorted by score DESC-ed</div>
+				{{ Form::open(['url' => '/backend/report/all-quiz-score/', 'method' => 'get'])}}
+					{{ Form::submit('Generate', ['class' => 'btn btn-primary btn-sm btn-block'])}}
+				{{ Form::close() }}
+			</div>
+		</div>
+	</div>
 </div>
 
 @stop

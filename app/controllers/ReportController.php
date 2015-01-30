@@ -111,6 +111,11 @@ class ReportController extends BaseController {
 		return View::make('backend.report.quiz', $data);
 	}
 
+	public function getAllQuizScore() {
+		$data = ['attendees' => Attendee::join('quiz', 'attendees.id', '=', 'quiz.attendee_id')->select(DB::raw('*, IFNULL(day_1_score, 0)+IFNULL(day_2_score, 0)+IFNULL(day_3_score, 0)+IFNULL(day_4_score, 0)+IFNULL(day_5_score, 0) AS sum_score'))->where('day_1_score', '!=', '')->orWhere('day_2_score' ,'!=', '')->orWhere('day_3_score' ,'!=', '')->orWhere('day_4_score' ,'!=', '')->orWhere('day_5_score' ,'!=', '')->orderBy('sum_score', 'DESC')->get()];
+		return View::make('backend.report.all_quiz', $data);
+	}
+
 }
 
 

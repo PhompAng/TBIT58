@@ -97,6 +97,9 @@ class ReportController extends BaseController {
 		$min = Quiz::min('day_'.$day.'_score');
 		$max = Quiz::max('day_'.$day.'_score');
 		$sum = 0;
+		if (Quiz::where('day_'.$day.'_score', '!=', '')->count() == 0) {
+			return Redirect::to('/backend/report');
+		}
 		foreach (Quiz::where('day_'.$day.'_score', '!=', '')->get()->toArray() as $score) {
 			$sum += pow($score['day_'.$day.'_score'] - $mean, 2);
 		}

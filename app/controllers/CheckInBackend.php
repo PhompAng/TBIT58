@@ -105,6 +105,7 @@ class CheckInBackend extends \BaseController {
 			$attendee->room = Input::get('room', 0);
 		}
 		$attending->save();
+		$attendee->save();
 		return Redirect::to('/backend/checkin/');
 	}
 

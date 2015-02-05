@@ -46,3 +46,5 @@ Route::resource('register', 'Register');
 
 
 Route::resource('quiz', 'QuizController');
+
+Route::resource('search', 'GuestSearchController');

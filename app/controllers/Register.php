@@ -15,7 +15,7 @@ class Register extends \BaseController {
 	public function index()
 	{
 		$data = array('title' => "ลงทะเบียนเข้าร่วมโครงการ - ToBeIT@KMITL '58", );
-		return View::make('register.begin', $data);
+		return View::make('register.close', $data);
 	}
 
 
@@ -27,7 +27,8 @@ class Register extends \BaseController {
 	public function create()
 	{
 		$data = array('title' => "ลงทะเบียนเข้าร่วมโครงการ - ToBeIT@KMITL '58", );
-		return View::make('register.form', $data);
+		//return View::make('register.form', $data);
+        return View::make('register.close');
 	}
 
 

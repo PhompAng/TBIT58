@@ -9,9 +9,7 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function index()
 	{
-		$data = array('attendees' 		=> Attendee::all(),
-					  'attendees_count' => Attendee::all()->count()
-					  );
+		$data = array('attendees' => Attendee::paginate(30));
 		return View::make('backend.attendee.list', $data);
 	}
 
@@ -34,10 +32,19 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function store()
 	{
-		$attendee_id = Attendee::create(Input::all())->id;
+		$data = Input::all();
+		foreach (Input::all() as $key => $value) {
+			if ($value == "") {
+				$data[$key] = NULL;
+			}
+		}
+		$attendee_id = Attendee::create($data)->id;
 		$attending = new Attending();
 		$attending->attendee_id = $attendee_id;
 		$attending->save();
+		$quiz = new Quiz();
+		$quiz->attendee_id = $attendee_id;
+		$quiz->save();
 		return Redirect::to('/backend/attendee/'.$attendee_id);
 	}
 
@@ -76,8 +83,15 @@ class AttendeeBackend extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$attendee = Attendee::find($id)->fill(Input::all())->save();
+		$data = Input::all();
+		foreach (Input::all() as $key => $value) {
+			if ($value == "") {
+				$data[$key] = NULL;
+			}
+		}
+		$attendee = Attendee::find($id)->fill($data)->save();
 		return Redirect::to('/backend/attendee/'.$id);
+
 	}
 
 

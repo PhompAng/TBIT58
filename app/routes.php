@@ -16,12 +16,16 @@ Route::get('/', function()
 	return View::make('main');
 });
 
+
 Route::group(array('before'=>'auth'), function(){
 	Route::get('/backend', 'BackendController@showDashboard');
 	Route::resource('/backend/attendee', 'AttendeeBackend');
 	Route::resource('/backend/checkin', 'CheckInBackend');
 	Route::resource('/backend/medical', 'MedicalBackend');
 	Route::resource('/backend/profile', 'UserBackend');
+	Route::resource('/backend/quiz', 'QuizBackend');
+	Route::controller('/backend/search', 'SearchController');
+	Route::controller('/backend/report', 'ReportController');
 });
 
 Route::get('/backend/login', 'BackendController@showLogin');
@@ -39,3 +43,8 @@ Route::get('register/success', function()
 });
 
 Route::resource('register', 'Register');
+
+
+Route::resource('quiz', 'QuizController');
+
+Route::resource('search', 'GuestSearchController');

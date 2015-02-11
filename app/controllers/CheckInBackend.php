@@ -9,8 +9,7 @@ class CheckInBackend extends \BaseController {
 	 */
 	public function index()
 	{
-		$data = array('attendees' => Attendee::all(), );
-		return View::make('backend.checkin.list', $data);
+		return View::make('backend.checkin.list')->with('attendees', Attendee::paginate(30))->with('room1cnt', Attendee::where('room', 223)->count())->with('room2cnt', Attendee::where('room', 328)->count())->with('room3cnt', Attendee::where('room', 329)->count())->with('room4cnt', Attendee::where('room', 335)->count());
 	}
 
 
@@ -68,26 +67,46 @@ class CheckInBackend extends \BaseController {
 	 */
 	public function update($id)
 	{
-		if (Input::has('id')) {
+		if (!Input::has('id')) {
+			return Redirect::to('/backend/checkin/');
+		} else {
 			$id = Input::get('id');
+			$attendee = Attendee::find($id);
+			if (!Input::has('room') && $attendee->room == null) {
+				return Redirect::to('/backend/checkin/')->withErrors(["This attendee wasn't assign to any room!"])->withInput();
+			}
 		}
-		$attending = Attendee::find($id)->attend;
+		$attending = $attendee->attend;
 		$today = date('Y-m-d');
-		if ($today == '2015-01-11') {
-			$attending->day_1_check = !$attending->day_1_check;
+		$mode = 0;
+		if ($today == '2015-01-10') {
+			$attending->day_1_check = Input::get('mode', 0);
+			$attendee->food = Input::get('food', 0);
+			$attendee->room = Input::get('room', 0);
 		} elseif ($today == '2015-01-11') {
-			$attending->day_2_check = !$attending->day_2_check;
+			$attending->day_2_check = Input::get('mode', 0);
+			$attendee->food = Input::get('food', 0);
+			$attendee->room = Input::get('room', 0);
 		} elseif ($today == '2015-01-24') {
-			$attending->day_3_check = !$attending->day_3_check;
+			$attending->day_3_check = Input::get('mode', 0);
+			$attendee->food = Input::get('food', 0);
+			$attendee->room = Input::get('room', 0);
 		} elseif ($today == '2015-01-25') {
-			$attending->day_4_check = !$attending->day_4_check;
+			$attending->day_4_check = Input::get('mode', 0);
+			$attendee->food = Input::get('food', 0);
+			$attendee->room = Input::get('room', 0);
 		} elseif ($today == '2015-01-31') {
-			$attending->day_5_check = !$attending->day_5_check;
+			$attending->day_5_check = Input::get('mode', 0);
+			$attendee->food = Input::get('food', 0);
+			$attendee->room = Input::get('room', 0);
 		} elseif ($today == '2015-02-01') {
-			$attending->day_6_check = !$attending->day_6_check;
+			$attending->day_6_check = Input::get('mode', 0);
+			$attendee->food = Input::get('food', 0);
+			$attendee->room = Input::get('room', 0);
 		}
 		$attending->save();
-		return Redirect::to('/backend/checkin/')->with('attendee', Attendee::find($id));
+		$attendee->save();
+		return Redirect::to('/backend/checkin/');
 	}
 
 

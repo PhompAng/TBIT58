@@ -173,6 +173,7 @@ img#logo {
   margin-bottom: 15px;
   padding-right: 0;
   padding-left: 0;
+  padding-bottom: 15px;
   width: 100%;
   float: left;
 }
@@ -183,10 +184,6 @@ img#logo {
   width: 100%;
   margin-top: 15px;
   margin-bottom: 15px;
-}
-
-.subject-item > a {
-	margin-bottom: 15px;
 }
 
 .subject-item > img {

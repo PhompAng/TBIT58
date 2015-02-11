@@ -1,7 +1,7 @@
 <?php
 
 class Register extends \BaseController {
-	
+
 
 	function __construct() {
 		//$this->beforeFilter('auth', array('except' => array('index', 'create', 'store')));
@@ -39,28 +39,37 @@ class Register extends \BaseController {
 	public function store()
 	{
 		$validate_rules = array(
-			'prefix' 	 => 'required',	
+			'prefix'     => 'required',
 			'name'       => 'required|alpha',
 			'surname'    => 'required|alpha',
-			'gender'	 =>	'required',
+			'gender'     => 'required',
 			'email'      => 'required|email',
 			'parent_tel' => 'required|numeric|digits_between:9,10',
-			'tel' 		 => 'numeric|digits_between:9,10',
+			'tel'        => 'numeric|digits_between:9,10',
 		);
 		$validator = Validator::make(Input::all(), $validate_rules);
 		if (!$validator->fails()) {
-			$attendee_id = Attendee::create(Input::all())->id;
+			$data = Input::all();
+			foreach (Input::all() as $key => $value) {
+				if ($value == "") {
+					$data[$key] = NULL;
+				}
+			}
+			$attendee_id = Attendee::create($data)->id;
 			$attending = new Attending();
 			$attending->attendee_id = $attendee_id;
 			$attending->save();
+			$quiz = new Quiz();
+			$quiz->attendee_id = $attendee_id;
+			$quiz->save();
 			$attendee_id = str_repeat("0", 6-strlen($attendee_id)).$attendee_id;
-			$data = array('title' 		=> "ลงทะเบียนสำเร็จ! - ToBeIT@KMITL '58",
+			$data = array('title'       => "ลงทะเบียนสำเร็จ! - ToBeIT@KMITL '58",
 						  'attendee_id' => $attendee_id,
-						  'firstname'	=> Input::get('name'),
-						  'lastname'	=> Input::get('surname'));
+						  'firstname'   => Input::get('name'),
+						  'lastname'    => Input::get('surname'));
 			Mail::queue('mail.confirm', $data, function($message)
 			{
-			    $message->to(Input::get('email'), Input::get('name')." ".Input::get('surname'))->subject('การลงทะเบียนเข้าร่วมโครงการ ToBeIT@KMITL \'58 สำเร็จ!');
+				$message->to(Input::get('email'), Input::get('name')." ".Input::get('surname'))->subject('การลงทะเบียนเข้าร่วมโครงการ ToBeIT@KMITL \'58 สำเร็จ!');
 			});
 			return Redirect::to('/register/success/')->with('attendee_id', $attendee_id);
 		} else {

@@ -35,16 +35,16 @@
 					<p>ไม่ว่าน้องจะจบ ม.ปลาย สายไหน หรือปวช. จากที่ใด และหากน้องเป็นผู้ที่สนใจจะศึกษาต่อในคณะ IT... แต่ยังหาคนติวให้ไม่ได้ หรือหาได้แล้วก็ห้ามพลาด!?! เพราะโอกาสดีๆ มาถึงแล้ว เพียงน้องมาติวกับพี่ๆ คณะไอทีลาดกระบังในโครงการ "ToBeIT@KMITL ‘58 (ติวน้องสอบตรงไอทีลาดกระบัง 58)"</p>
 				</div>
 				<div class="text-center">
-					<a href="{{URL::to('/register')}}" class="page-scroll btn-register btn btn-lg">ลงทะเบียนเข้าร่วมโครงการ</a>
+					<a href="{{URL::to('/register')}}" class="page-scroll btn-register btn btn-lg disabled">ติดตามวิดีโอการติวได้ที่นี่เร็วๆ นี้</a>
 				</div>
 			</div>
 			<div class="col-xs-12">
 				<div class="social text-center">
-          <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Ftobeitkmitl&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
-          <iframe src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Ftobe.it.kmitl.ac.th%2F2014%2F&amp;layout=button_count&amp;appId=556545787778563" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
-          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tobe.it.kmitl.ac.th/2014/" data-text="ToBeIT@KMITL - ติวน้องสอบตรงไอทีลาดกระบัง โครงการที่ให้น้องๆ ได้เตรียมความพร้อมก่อนเข้าสู่สนามสอบจริง!" data-hashtags="itkmitl">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-          <div class="g-plusone" data-size="medium" data-href="http://tobe.it.kmitl.ac.th"></div>
-        </div>
+		  <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Ftobeitkmitl&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+		  <iframe src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Ftobe.it.kmitl.ac.th%2F2014%2F&amp;layout=button_count&amp;appId=556545787778563" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+		  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tobe.it.kmitl.ac.th/2014/" data-text="ToBeIT@KMITL - ติวน้องสอบตรงไอทีลาดกระบัง โครงการที่ให้น้องๆ ได้เตรียมความพร้อมก่อนเข้าสู่สนามสอบจริง!" data-hashtags="itkmitl">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		  <div class="g-plusone" data-size="medium" data-href="http://tobe.it.kmitl.ac.th"></div>
+		</div>
 			</div>
 		</div>
 	</div>
@@ -192,24 +192,26 @@
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/db.gif')}}">
 							<h4 class="subject-title">Database</h4>
-							<a href="#" class="btn btn-default disabled btn-sm"><span class="glyphicon glyphicon-download-alt"></span> รออีกแปบนึงนะ :3</a>
+							<a href="{{ URL::to('/sheets/database.pdf')}}" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/media.gif')}}">
 							<h4 class="subject-title">Website & Multimedia</h4>
-							<a href="#" class="btn btn-default disabled btn-sm"><span class="glyphicon glyphicon-download-alt"></span> รออีกแปบนึงนะ :3</a>
+							<a href="{{ URL::to('/sheets/WebAndMulti.pdf')}}" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/network.gif')}}">
 							<h4 class="subject-title">Network</h4>
-							<a href="#" class="btn btn-default disabled btn-sm"><span class="glyphicon glyphicon-download-alt"></span> รออีกแปบนึงนะ :3</a>
+							<a href="{{ URL::to('/sheets/Network58.pdf')}}" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt"></span> ดาวน์โหลดเอกสาร</a>
 						</div>
 						<div class="subject-item card">
 							<img src="{{URL::to('/assets/img/courses/programming.gif')}}">
 							<h4 class="subject-title">Programming & Math</h4>
-							<a href="#" class="btn btn-default disabled btn-sm"><span class="glyphicon glyphicon-download-alt"></span> รออีกแปบนึงนะ :3</a>
-						</div>
-				</div>
+							<div class="btn-group" role="group" >
+							  <button type="button" class="btn btn-default"><a href="{{ URL::to('/sheets/Programming58.pdf')}}" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt"></span> Programming</a></button>
+							  <button type="button" class="btn btn-default"><a href="{{ URL::to('/sheets/Mathematic58.pdf')}}" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-download-alt"></span> Math</a></button>
+							</div>
+				</div>sadfghjk
 			</div>
 		</div>
 	</div>
